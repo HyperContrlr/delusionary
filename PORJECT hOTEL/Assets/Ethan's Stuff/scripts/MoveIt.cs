@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class topDownMovement : MonoBehaviour
+public class MoveIt : MonoBehaviour
 {
     public float moveSpeed;
     public float sprintMultiplier;
