@@ -30,7 +30,7 @@ public class MoveIt : MonoBehaviour
 
         rb.velocity = moveInput * activeMoveSpeed;
 
-        if (Input.GetKeyDown(KeyboardSprint))
+        if (Input.GetKey(KeyboardSprint))
         {
             activeMoveSpeed = moveSpeed * sprintMultiplier;
         }
