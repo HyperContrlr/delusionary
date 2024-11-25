@@ -1,8 +1,11 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MoveIt : MonoBehaviour
 {
+    TheControls controls;
     public float moveSpeed;
     public float sprintMultiplier;
     public Rigidbody rb;
@@ -13,6 +16,25 @@ public class MoveIt : MonoBehaviour
     public speedometer speeeeed;
     //public Animator animator;
 
+    private void Awake()
+    {
+        //For now, assigns the controls
+        controls = new TheControls();
+        controls.GamePlay.Interact.performed += ctx => Interact();
+    }
+    void Interact()
+    {
+        //put interact functions here
+        Console.WriteLine("lesgoooooooooo");
+    }
+    void OnEnable()
+    {
+        controls.GamePlay.Enable();
+    }
+    void OnDisable()
+    {
+        controls.GamePlay.Disable();
+    }
     // Start is called before the first frame update
     void Start()
     {
