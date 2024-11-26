@@ -20,12 +20,6 @@ public class MoveIt : MonoBehaviour
     {
         //For now, assigns the controls
         controls = new TheControls();
-        controls.GamePlay.Interact.performed += ctx => Interact();
-    }
-    void Interact()
-    {
-        //put interact functions here
-        Console.WriteLine("lesgoooooooooo");
     }
     void OnEnable()
     {
@@ -52,13 +46,21 @@ public class MoveIt : MonoBehaviour
 
         rb.velocity = moveInput * activeMoveSpeed;
 
-        if (Input.GetKey(KeyboardSprint))
+        if (controls.GamePlay.Sprint.IsInProgress())
         {
             activeMoveSpeed = moveSpeed * sprintMultiplier;
         }
         else
         {
             activeMoveSpeed = moveSpeed;
+        }
+
+        if (controls.GamePlay.Interact.WasPerformedThisFrame()) 
+        {
+            Console.WriteLine("lesgoooooooooo");
+        }
+        else {
+            Console.WriteLine("ruyy");
         }
         
         /*if (Input.GetKey(KeyCode.W))

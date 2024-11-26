@@ -65,17 +65,6 @@
                 },
                 {
                     "name": "",
-                    "id": "7338d267-5e65-4822-9d36-2a8c8497afee",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Interact",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "ae35ff1c-d889-49f7-8c59-1fef5e72e313",
                     "path": "<Gamepad>/start",
                     "interactions": "",
@@ -104,6 +93,67 @@
                     "processors": "",
                     "groups": "",
                     "action": "Inventory R",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c5de96d7-64fd-4754-88bb-32aaaf5c637b",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "dialogue",
+            "id": "bab76d42-d75a-41f8-8322-51e545c685e7",
+            "actions": [
+                {
+                    "name": "Progress Dialogue",
+                    "type": "Button",
+                    "id": "c56c5a04-1ae8-4adb-9ec7-126cadb653c8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "69a9c783-89b1-4cb6-9657-363a74984196",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Progress Dialogue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1cd15954-b773-4188-840a-15d3fb1a70e5",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Progress Dialogue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c860960d-760b-4edc-8158-dcbada2b81c1",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Progress Dialogue",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
