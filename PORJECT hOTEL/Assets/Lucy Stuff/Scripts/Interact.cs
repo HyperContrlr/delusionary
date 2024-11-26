@@ -26,6 +26,9 @@ public class Interact : MonoBehaviour
            
         }
     }
+    bool DialougeOpened;
+
+
     public void OnTriggerExit(Collider collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -44,7 +47,6 @@ public class Interact : MonoBehaviour
     public void Start()
     {
         textComponent.text = string.Empty;
-        StartDialoug();
     }
     public void Update()
     {
@@ -52,25 +54,59 @@ public class Interact : MonoBehaviour
         {
             if (Text != null)
             {
+                bool NoMoreE = true;
                 Text.SetActive(true);
+                StartDialoug();
             }
         }
         if (!canInteract)
         {
             Text.gameObject.SetActive(false);
         }
+        else if (Input.GetMouseButtonDown(0))
+        {
+            if(!DialougeOpened)
+            {
+                StartDialoug();
+            }
+           else if (textComponent.text == lines[index])
+            {
+                NextLine();
+            }
+            else
+            {
+                StopAllCoroutines();
+                textComponent.text = lines[index];
+            }
+        }
     }
     void StartDialoug()
     {
         index = 0;
+        DialougeOpened = true;
+    
         StartCoroutine(TypeLine());
     }
     IEnumerator TypeLine()
     {
+        textComponent.text = string.Empty;
         foreach (char c in lines[index].ToCharArray())
         {
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
+        }
+    }
+    void NextLine()
+    {
+        if (index < lines.Length - 1)
+        {
+            index++;
+            StartCoroutine(TypeLine());
+        }
+        else
+        {
+            Text.SetActive(false);
+            DialougeOpened = false; 
         }
     }
 }
