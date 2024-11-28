@@ -13,7 +13,7 @@ public class Interact : MonoBehaviour
     public string[] lines;
     public float textSpeed;
     private int index;
-    //public bool NoMoreE;
+    public bool noMoreE;
 
     public void OnTriggerEnter(Collider collision)
     {
@@ -28,6 +28,13 @@ public class Interact : MonoBehaviour
     }
     bool DialougeOpened;
 
+    void StartDialoug()
+    {
+        index = 0;
+        DialougeOpened = true;
+    
+        StartCoroutine(TypeLine());
+    }
 
     public void OnTriggerExit(Collider collision)
     {
@@ -46,13 +53,13 @@ public class Interact : MonoBehaviour
     }
     public void NoMoreE()
     {
-        if (NoMoreE == true)
+        if (noMoreE == false)
         {
-        StartDialoug() = false;
+            StartDialoug();
         }
-        if (NoMoreE == false)
+        else
         {
-        StartDialoug() = true;
+            return;
         }
     }
     public void Start()
@@ -65,7 +72,7 @@ public class Interact : MonoBehaviour
         {
             if (Text != null)
             {
-                NoMoreE = true;
+                noMoreE = true;
                 Text.SetActive(true);
                 StartDialoug();
             }
@@ -91,13 +98,6 @@ public class Interact : MonoBehaviour
             }
         }
     }
-    void StartDialoug()
-    {
-        index = 0;
-        DialougeOpened = true;
-    
-        StartCoroutine(TypeLine());
-    }
     IEnumerator TypeLine()
     {
         textComponent.text = string.Empty;
@@ -118,7 +118,7 @@ public class Interact : MonoBehaviour
         {
             Text.SetActive(false);
             DialougeOpened = false; 
-            NoMoreE = false;
+            noMoreE = false;
         }
     }
 }
