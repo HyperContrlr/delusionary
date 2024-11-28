@@ -55,13 +55,13 @@ public class MoveIt : MonoBehaviour
             activeMoveSpeed = moveSpeed;
         }
 
-        if (controls.GamePlay.Interact.WasPerformedThisFrame()) 
+        /*if (controls.GamePlay.Interact.IsInProgress()) 
         {
             Console.WriteLine("lesgoooooooooo");
         }
         else {
             Console.WriteLine("ruyy");
-        }
+        }*/
         
         /*if (Input.GetKey(KeyCode.W))
         {
