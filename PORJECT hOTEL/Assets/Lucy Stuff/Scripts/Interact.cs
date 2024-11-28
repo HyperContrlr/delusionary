@@ -13,6 +13,7 @@ public class Interact : MonoBehaviour
     public string[] lines;
     public float textSpeed;
     private int index;
+    //public bool NoMoreE;
 
     public void OnTriggerEnter(Collider collision)
     {
@@ -22,8 +23,7 @@ public class Interact : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Player")
         {
-            canInteract = true;
-           
+            canInteract = true; 
         }
     }
     bool DialougeOpened;
@@ -44,6 +44,17 @@ public class Interact : MonoBehaviour
             canInteract = false;
         }
     }
+    public void NoMoreE()
+    {
+        if (NoMoreE == true)
+        {
+        StartDialoug() = false;
+        }
+        if (NoMoreE == false)
+        {
+        StartDialoug() = true;
+        }
+    }
     public void Start()
     {
         textComponent.text = string.Empty;
@@ -54,7 +65,7 @@ public class Interact : MonoBehaviour
         {
             if (Text != null)
             {
-                bool NoMoreE = true;
+                NoMoreE = true;
                 Text.SetActive(true);
                 StartDialoug();
             }
@@ -107,6 +118,7 @@ public class Interact : MonoBehaviour
         {
             Text.SetActive(false);
             DialougeOpened = false; 
+            NoMoreE = false;
         }
     }
 }
