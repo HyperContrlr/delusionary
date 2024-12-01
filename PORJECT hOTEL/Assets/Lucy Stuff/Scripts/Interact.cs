@@ -14,6 +14,7 @@ public class Interact : MonoBehaviour
     public float textSpeed;
     private int index;
     public bool noMoreE;
+    
 
     public void OnTriggerEnter(Collider collision)
     {
@@ -32,9 +33,18 @@ public class Interact : MonoBehaviour
     {
         index = 0;
         DialougeOpened = true;
-    
+       
         StartCoroutine(TypeLine());
     }
+    //public void Pause()
+    //{
+       // Time.timeScale = 0f;
+//}
+    //public void ResumeEffect()
+    //{
+    //    Time.timeScale = 1f;
+
+    //}
 
     public void OnTriggerExit(Collider collision)
     {
@@ -53,15 +63,17 @@ public class Interact : MonoBehaviour
     }
     public void NoMoreE()
     {
-        if (noMoreE == false)
-        {
+        if (noMoreE == true)
+        {        
             StartDialoug();
+            this.gameObject.GetComponent("if (Input.GetKeyDown(KeyCode.E) && canInteract)").enabled == flase;
         }
         else
         {
             return;
         }
     }
+   
     public void Start()
     {
         textComponent.text = string.Empty;
@@ -75,6 +87,8 @@ public class Interact : MonoBehaviour
                 noMoreE = true;
                 Text.SetActive(true);
                 StartDialoug();
+                Time.timeScale = 0f;
+
             }
         }
         if (!canInteract)
@@ -98,13 +112,14 @@ public class Interact : MonoBehaviour
             }
         }
     }
+   
     IEnumerator TypeLine()
     {
         textComponent.text = string.Empty;
         foreach (char c in lines[index].ToCharArray())
         {
             textComponent.text += c;
-            yield return new WaitForSeconds(textSpeed);
+            yield return new WaitForSecondsRealtime(textSpeed);
         }
     }
     void NextLine()
@@ -119,6 +134,7 @@ public class Interact : MonoBehaviour
             Text.SetActive(false);
             DialougeOpened = false; 
             noMoreE = false;
+            Time.timeScale = 1f;
         }
     }
 }
