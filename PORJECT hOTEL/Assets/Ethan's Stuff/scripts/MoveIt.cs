@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.iOS;
 
 public class MoveIt : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class MoveIt : MonoBehaviour
     private float activeMoveSpeed;
     public speedometer speeeeed;
     //public Animator animator;
+
+    [SerializeField]
+    private InputActionReference Sprint, Interact, Pause, InventoryL, InventoryR;
 
     private void Awake()
     {
@@ -55,13 +59,13 @@ public class MoveIt : MonoBehaviour
             activeMoveSpeed = moveSpeed;
         }
 
-        /*if (controls.GamePlay.Interact.IsInProgress()) 
+        if (controls.GamePlay.Interact.IsPressed()) 
         {
             Console.WriteLine("lesgoooooooooo");
         }
         else {
             Console.WriteLine("ruyy");
-        }*/
+        }
         
         /*if (Input.GetKey(KeyCode.W))
         {

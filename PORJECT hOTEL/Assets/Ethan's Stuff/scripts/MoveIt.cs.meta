@@ -3,7 +3,18 @@ guid: 48e917e4dd532e640938fb6de119f7f0
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - rb: {instanceID: 0}
+  - speeeeed: {instanceID: 0}
+  - Sprint: {fileID: 71804224509942658, guid: ca31eb6ffee0f28478f70c7eaa6f582a, type: 3}
+  - Interact: {fileID: 71804224509942658, guid: ca31eb6ffee0f28478f70c7eaa6f582a,
+      type: 3}
+  - Pause: {fileID: -8168448883349670795, guid: ca31eb6ffee0f28478f70c7eaa6f582a,
+      type: 3}
+  - InventoryL: {fileID: 8463849950887473198, guid: ca31eb6ffee0f28478f70c7eaa6f582a,
+      type: 3}
+  - InventoryR: {fileID: -2445860415303551947, guid: ca31eb6ffee0f28478f70c7eaa6f582a,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
