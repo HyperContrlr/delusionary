@@ -82,7 +82,7 @@ public class Interact : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && canInteract)
         {
-            if (Text != null)
+            if (Text != null && noMoreE == false)
             {
                 noMoreE = true;
                 Text.SetActive(true);
