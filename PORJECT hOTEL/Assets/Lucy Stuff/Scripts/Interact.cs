@@ -66,7 +66,7 @@ public class Interact : MonoBehaviour
         if (noMoreE == true)
         {        
             StartDialoug();
-            this.gameObject.GetComponent("if (Input.GetKeyDown(KeyCode.E) && canInteract)").enabled == flase;
+            
         }
         else
         {
