@@ -24,7 +24,7 @@ public partial class @TheControls : IInputActionCollection2, IDisposable
     ""name"": ""TheControls"",
     ""maps"": [
         {
-            ""name"": ""GamePlay"",
+            ""name"": ""game"",
             ""id"": ""2dcac892-2a5a-4320-a92b-91d117009dc4"",
             ""actions"": [
                 {
@@ -77,7 +77,7 @@ public partial class @TheControls : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""08790f6c-2697-49ff-bd47-540e6c8403d7"",
-                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -150,6 +150,17 @@ public partial class @TheControls : IInputActionCollection2, IDisposable
                     ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c8ef0af5-c75f-419c-a44c-4f2ef409551e"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -204,15 +215,32 @@ public partial class @TheControls : IInputActionCollection2, IDisposable
             ]
         }
     ],
-    ""controlSchemes"": []
+    ""controlSchemes"": [
+        {
+            ""name"": ""Controller"",
+            ""bindingGroup"": ""Controller"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Gamepad>"",
+                    ""isOptional"": true,
+                    ""isOR"": false
+                },
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        }
+    ]
 }");
-        // GamePlay
-        m_GamePlay = asset.FindActionMap("GamePlay", throwIfNotFound: true);
-        m_GamePlay_Sprint = m_GamePlay.FindAction("Sprint", throwIfNotFound: true);
-        m_GamePlay_Interact = m_GamePlay.FindAction("Interact", throwIfNotFound: true);
-        m_GamePlay_Pause = m_GamePlay.FindAction("Pause", throwIfNotFound: true);
-        m_GamePlay_InventoryL = m_GamePlay.FindAction("Inventory L", throwIfNotFound: true);
-        m_GamePlay_InventoryR = m_GamePlay.FindAction("Inventory R", throwIfNotFound: true);
+        // game
+        m_game = asset.FindActionMap("game", throwIfNotFound: true);
+        m_game_Sprint = m_game.FindAction("Sprint", throwIfNotFound: true);
+        m_game_Interact = m_game.FindAction("Interact", throwIfNotFound: true);
+        m_game_Pause = m_game.FindAction("Pause", throwIfNotFound: true);
+        m_game_InventoryL = m_game.FindAction("Inventory L", throwIfNotFound: true);
+        m_game_InventoryR = m_game.FindAction("Inventory R", throwIfNotFound: true);
         // dialogue
         m_dialogue = asset.FindActionMap("dialogue", throwIfNotFound: true);
         m_dialogue_ProgressDialogue = m_dialogue.FindAction("Progress Dialogue", throwIfNotFound: true);
@@ -272,49 +300,49 @@ public partial class @TheControls : IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // GamePlay
-    private readonly InputActionMap m_GamePlay;
-    private IGamePlayActions m_GamePlayActionsCallbackInterface;
-    private readonly InputAction m_GamePlay_Sprint;
-    private readonly InputAction m_GamePlay_Interact;
-    private readonly InputAction m_GamePlay_Pause;
-    private readonly InputAction m_GamePlay_InventoryL;
-    private readonly InputAction m_GamePlay_InventoryR;
-    public struct GamePlayActions
+    // game
+    private readonly InputActionMap m_game;
+    private IGameActions m_GameActionsCallbackInterface;
+    private readonly InputAction m_game_Sprint;
+    private readonly InputAction m_game_Interact;
+    private readonly InputAction m_game_Pause;
+    private readonly InputAction m_game_InventoryL;
+    private readonly InputAction m_game_InventoryR;
+    public struct GameActions
     {
         private @TheControls m_Wrapper;
-        public GamePlayActions(@TheControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Sprint => m_Wrapper.m_GamePlay_Sprint;
-        public InputAction @Interact => m_Wrapper.m_GamePlay_Interact;
-        public InputAction @Pause => m_Wrapper.m_GamePlay_Pause;
-        public InputAction @InventoryL => m_Wrapper.m_GamePlay_InventoryL;
-        public InputAction @InventoryR => m_Wrapper.m_GamePlay_InventoryR;
-        public InputActionMap Get() { return m_Wrapper.m_GamePlay; }
+        public GameActions(@TheControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Sprint => m_Wrapper.m_game_Sprint;
+        public InputAction @Interact => m_Wrapper.m_game_Interact;
+        public InputAction @Pause => m_Wrapper.m_game_Pause;
+        public InputAction @InventoryL => m_Wrapper.m_game_InventoryL;
+        public InputAction @InventoryR => m_Wrapper.m_game_InventoryR;
+        public InputActionMap Get() { return m_Wrapper.m_game; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(GamePlayActions set) { return set.Get(); }
-        public void SetCallbacks(IGamePlayActions instance)
+        public static implicit operator InputActionMap(GameActions set) { return set.Get(); }
+        public void SetCallbacks(IGameActions instance)
         {
-            if (m_Wrapper.m_GamePlayActionsCallbackInterface != null)
+            if (m_Wrapper.m_GameActionsCallbackInterface != null)
             {
-                @Sprint.started -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnSprint;
-                @Sprint.performed -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnSprint;
-                @Sprint.canceled -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnSprint;
-                @Interact.started -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnInteract;
-                @Interact.performed -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnInteract;
-                @Interact.canceled -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnInteract;
-                @Pause.started -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnPause;
-                @Pause.performed -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnPause;
-                @Pause.canceled -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnPause;
-                @InventoryL.started -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnInventoryL;
-                @InventoryL.performed -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnInventoryL;
-                @InventoryL.canceled -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnInventoryL;
-                @InventoryR.started -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnInventoryR;
-                @InventoryR.performed -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnInventoryR;
-                @InventoryR.canceled -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnInventoryR;
+                @Sprint.started -= m_Wrapper.m_GameActionsCallbackInterface.OnSprint;
+                @Sprint.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnSprint;
+                @Sprint.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnSprint;
+                @Interact.started -= m_Wrapper.m_GameActionsCallbackInterface.OnInteract;
+                @Interact.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnInteract;
+                @Interact.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnInteract;
+                @Pause.started -= m_Wrapper.m_GameActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnPause;
+                @InventoryL.started -= m_Wrapper.m_GameActionsCallbackInterface.OnInventoryL;
+                @InventoryL.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnInventoryL;
+                @InventoryL.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnInventoryL;
+                @InventoryR.started -= m_Wrapper.m_GameActionsCallbackInterface.OnInventoryR;
+                @InventoryR.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnInventoryR;
+                @InventoryR.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnInventoryR;
             }
-            m_Wrapper.m_GamePlayActionsCallbackInterface = instance;
+            m_Wrapper.m_GameActionsCallbackInterface = instance;
             if (instance != null)
             {
                 @Sprint.started += instance.OnSprint;
@@ -335,7 +363,7 @@ public partial class @TheControls : IInputActionCollection2, IDisposable
             }
         }
     }
-    public GamePlayActions @GamePlay => new GamePlayActions(this);
+    public GameActions @game => new GameActions(this);
 
     // dialogue
     private readonly InputActionMap m_dialogue;
@@ -369,7 +397,16 @@ public partial class @TheControls : IInputActionCollection2, IDisposable
         }
     }
     public DialogueActions @dialogue => new DialogueActions(this);
-    public interface IGamePlayActions
+    private int m_ControllerSchemeIndex = -1;
+    public InputControlScheme ControllerScheme
+    {
+        get
+        {
+            if (m_ControllerSchemeIndex == -1) m_ControllerSchemeIndex = asset.FindControlSchemeIndex("Controller");
+            return asset.controlSchemes[m_ControllerSchemeIndex];
+        }
+    }
+    public interface IGameActions
     {
         void OnSprint(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);

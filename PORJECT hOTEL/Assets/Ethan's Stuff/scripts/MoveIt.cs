@@ -16,9 +16,7 @@ public class MoveIt : MonoBehaviour
     private float activeMoveSpeed;
     public speedometer speeeeed;
     //public Animator animator;
-
-    [SerializeField]
-    private InputActionReference Sprint, Interact, Pause, InventoryL, InventoryR;
+    public InputActionReference Sprint, Interact, Pause, InventoryL, InventoryR;
 
     private void Awake()
     {
@@ -27,11 +25,28 @@ public class MoveIt : MonoBehaviour
     }
     void OnEnable()
     {
-        controls.GamePlay.Enable();
+        Sprint.action.performed += Sprint_started;
+        Interact.action.started += Interact_started;
     }
+    private void Interact_started(InputAction.CallbackContext obj)
+    {
+        Debug.Log("Interact Pressed");
+    }
+    private void Sprint_started(InputAction.CallbackContext obj)
+    {
+        Debug.Log("Sprint Pressed");
+        //activeMoveSpeed = moveSpeed * sprintMultiplier;
+        /*if (Sprint.action.canceled -= )
+        {
+            Debug.Log("sprint Released");
+        }
+        /**/
+    }
+
     void OnDisable()
     {
-        controls.GamePlay.Disable();
+        Sprint.action.started -= Sprint_started;
+        Interact.action.started -= Interact_started;
     }
     // Start is called before the first frame update
     void Start()
@@ -42,7 +57,7 @@ public class MoveIt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.z = Input.GetAxisRaw("Vertical");
 
@@ -50,7 +65,7 @@ public class MoveIt : MonoBehaviour
 
         rb.velocity = moveInput * activeMoveSpeed;
 
-        if (controls.GamePlay.Sprint.IsInProgress())
+        if (controls.game.Sprint.IsInProgress())
         {
             activeMoveSpeed = moveSpeed * sprintMultiplier;
         }
@@ -58,15 +73,6 @@ public class MoveIt : MonoBehaviour
         {
             activeMoveSpeed = moveSpeed;
         }
-
-        if (controls.GamePlay.Interact.IsPressed()) 
-        {
-            Console.WriteLine("lesgoooooooooo");
-        }
-        else {
-            Console.WriteLine("ruyy");
-        }
-        
         /*if (Input.GetKey(KeyCode.W))
         {
             animator.SetInteger("WalkDirection", 1);
@@ -91,5 +97,6 @@ public class MoveIt : MonoBehaviour
         {
 
         }*/
+
     }
 }

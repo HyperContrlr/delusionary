@@ -2,7 +2,7 @@
     "name": "TheControls",
     "maps": [
         {
-            "name": "GamePlay",
+            "name": "game",
             "id": "2dcac892-2a5a-4320-a92b-91d117009dc4",
             "actions": [
                 {
@@ -55,7 +55,7 @@
                 {
                     "name": "",
                     "id": "08790f6c-2697-49ff-bd47-540e6c8403d7",
-                    "path": "<Gamepad>/buttonEast",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -128,6 +128,17 @@
                     "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c8ef0af5-c75f-419c-a44c-4f2ef409551e",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -182,5 +193,22 @@
             ]
         }
     ],
-    "controlSchemes": []
+    "controlSchemes": [
+        {
+            "name": "Controller",
+            "bindingGroup": "Controller",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
+                    "isOptional": true,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
 }
