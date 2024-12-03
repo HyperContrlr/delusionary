@@ -34,9 +34,17 @@ public class MoveIt : MonoBehaviour
     }
     private void Sprint_started(InputAction.CallbackContext obj)
     {
+        if (Sprint.action.IsInProgress())
+        {
+            activeMoveSpeed = moveSpeed * sprintMultiplier;
+        }
+        else if (!Sprint.action.IsInProgress()) 
+        {
+            activeMoveSpeed = moveSpeed;
+        }
         Debug.Log("Sprint Pressed");
-        //activeMoveSpeed = moveSpeed * sprintMultiplier;
-        /*if (Sprint.action.canceled -= )
+        /*activeMoveSpeed = moveSpeed * sprintMultiplier;
+        if (Sprint.action.canceled -= )
         {
             Debug.Log("sprint Released");
         }
@@ -65,7 +73,7 @@ public class MoveIt : MonoBehaviour
 
         rb.velocity = moveInput * activeMoveSpeed;
 
-        if (controls.game.Sprint.IsInProgress())
+        /*if (controls.game.Sprint.IsInProgress())
         {
             activeMoveSpeed = moveSpeed * sprintMultiplier;
         }
