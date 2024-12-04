@@ -2,7 +2,7 @@
     "name": "TheControls",
     "maps": [
         {
-            "name": "GamePlay",
+            "name": "game",
             "id": "2dcac892-2a5a-4320-a92b-91d117009dc4",
             "actions": [
                 {
@@ -55,7 +55,7 @@
                 {
                     "name": "",
                     "id": "08790f6c-2697-49ff-bd47-540e6c8403d7",
-                    "path": "<Gamepad>/buttonEast",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -65,12 +65,12 @@
                 },
                 {
                     "name": "",
-                    "id": "7338d267-5e65-4822-9d36-2a8c8497afee",
-                    "path": "<Gamepad>/buttonSouth",
+                    "id": "1d713f28-5ca5-42f4-b780-432c8332b2d3",
+                    "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Interact",
+                    "action": "Sprint",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -78,6 +78,17 @@
                     "name": "",
                     "id": "ae35ff1c-d889-49f7-8c59-1fef5e72e313",
                     "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fca0e534-2f43-40fe-9ef1-bfae63e9d6d6",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -106,9 +117,98 @@
                     "action": "Inventory R",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c5de96d7-64fd-4754-88bb-32aaaf5c637b",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c8ef0af5-c75f-419c-a44c-4f2ef409551e",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "dialogue",
+            "id": "bab76d42-d75a-41f8-8322-51e545c685e7",
+            "actions": [
+                {
+                    "name": "Progress Dialogue",
+                    "type": "Button",
+                    "id": "c56c5a04-1ae8-4adb-9ec7-126cadb653c8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "69a9c783-89b1-4cb6-9657-363a74984196",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Progress Dialogue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1cd15954-b773-4188-840a-15d3fb1a70e5",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Progress Dialogue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c860960d-760b-4edc-8158-dcbada2b81c1",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Progress Dialogue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
     ],
-    "controlSchemes": []
+    "controlSchemes": [
+        {
+            "name": "Controller",
+            "bindingGroup": "Controller",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
+                    "isOptional": true,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.iOS;
 
 public class MoveIt : MonoBehaviour
 {
@@ -15,25 +16,45 @@ public class MoveIt : MonoBehaviour
     private float activeMoveSpeed;
     public speedometer speeeeed;
     //public Animator animator;
+    public InputActionReference Sprint, Interact, Pause, InventoryL, InventoryR;
 
     private void Awake()
     {
         //For now, assigns the controls
         controls = new TheControls();
-        controls.GamePlay.Interact.performed += ctx => Interact();
-    }
-    void Interact()
-    {
-        //put interact functions here
-        Console.WriteLine("lesgoooooooooo");
     }
     void OnEnable()
     {
-        controls.GamePlay.Enable();
+        Sprint.action.performed += Sprint_started;
+        Interact.action.started += Interact_started;
     }
+    private void Interact_started(InputAction.CallbackContext obj)
+    {
+        Debug.Log("Interact Pressed");
+    }
+    private void Sprint_started(InputAction.CallbackContext obj)
+    {
+        if (Sprint.action.IsInProgress())
+        {
+            activeMoveSpeed = moveSpeed * sprintMultiplier;
+        }
+        else if (!Sprint.action.IsInProgress()) 
+        {
+            activeMoveSpeed = moveSpeed;
+        }
+        Debug.Log("Sprint Pressed");
+        /*activeMoveSpeed = moveSpeed * sprintMultiplier;
+        if (Sprint.action.canceled -= )
+        {
+            Debug.Log("sprint Released");
+        }
+        /**/
+    }
+
     void OnDisable()
     {
-        controls.GamePlay.Disable();
+        Sprint.action.started -= Sprint_started;
+        Interact.action.started -= Interact_started;
     }
     // Start is called before the first frame update
     void Start()
@@ -44,7 +65,7 @@ public class MoveIt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.z = Input.GetAxisRaw("Vertical");
 
@@ -52,7 +73,7 @@ public class MoveIt : MonoBehaviour
 
         rb.velocity = moveInput * activeMoveSpeed;
 
-        if (Input.GetKey(KeyboardSprint))
+        /*if (controls.game.Sprint.IsInProgress())
         {
             activeMoveSpeed = moveSpeed * sprintMultiplier;
         }
@@ -60,7 +81,6 @@ public class MoveIt : MonoBehaviour
         {
             activeMoveSpeed = moveSpeed;
         }
-        
         /*if (Input.GetKey(KeyCode.W))
         {
             animator.SetInteger("WalkDirection", 1);
@@ -85,5 +105,6 @@ public class MoveIt : MonoBehaviour
         {
 
         }*/
+
     }
 }

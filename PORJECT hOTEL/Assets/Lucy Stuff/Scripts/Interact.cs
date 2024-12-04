@@ -13,6 +13,8 @@ public class Interact : MonoBehaviour
     public string[] lines;
     public float textSpeed;
     private int index;
+    public bool noMoreE;
+    
 
     public void OnTriggerEnter(Collider collision)
     {
@@ -22,10 +24,28 @@ public class Interact : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Player")
         {
-            canInteract = true;
-           
+            canInteract = true; 
         }
     }
+    bool DialougeOpened;
+
+    void StartDialoug()
+    {
+        index = 0;
+        DialougeOpened = true;
+       
+        StartCoroutine(TypeLine());
+    }
+    //public void Pause()
+    //{
+       // Time.timeScale = 0f;
+//}
+    //public void ResumeEffect()
+    //{
+    //    Time.timeScale = 1f;
+
+    //}
+
     public void OnTriggerExit(Collider collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -41,36 +61,80 @@ public class Interact : MonoBehaviour
             canInteract = false;
         }
     }
+    public void NoMoreE()
+    {
+        if (noMoreE == true)
+        {        
+            StartDialoug();
+            
+        }
+        else
+        {
+            return;
+        }
+    }
+   
     public void Start()
     {
         textComponent.text = string.Empty;
-        StartDialoug();
     }
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && canInteract)
         {
-            if (Text != null)
+            if (Text != null && noMoreE == false)
             {
+                noMoreE = true;
                 Text.SetActive(true);
+                StartDialoug();
+                Time.timeScale = 0f;
+
             }
         }
         if (!canInteract)
         {
             Text.gameObject.SetActive(false);
         }
+        else if (Input.GetMouseButtonDown(0))
+        {
+            if(!DialougeOpened)
+            {
+                StartDialoug();
+            }
+           else if (textComponent.text == lines[index])
+            {
+                NextLine();
+            }
+            else
+            {
+                StopAllCoroutines();
+                textComponent.text = lines[index];
+            }
+        }
     }
-    void StartDialoug()
-    {
-        index = 0;
-        StartCoroutine(TypeLine());
-    }
+   
     IEnumerator TypeLine()
     {
+        textComponent.text = string.Empty;
         foreach (char c in lines[index].ToCharArray())
         {
             textComponent.text += c;
-            yield return new WaitForSeconds(textSpeed);
+            yield return new WaitForSecondsRealtime(textSpeed);
+        }
+    }
+    void NextLine()
+    {
+        if (index < lines.Length - 1)
+        {
+            index++;
+            StartCoroutine(TypeLine());
+        }
+        else
+        {
+            Text.SetActive(false);
+            DialougeOpened = false; 
+            noMoreE = false;
+            Time.timeScale = 1f;
         }
     }
 }
