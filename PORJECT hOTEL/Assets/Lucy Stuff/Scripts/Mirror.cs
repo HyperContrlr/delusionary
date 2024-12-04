@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Mirror : MonoBehaviour
 {
-    public GameObject PhotoGraph;
-    public GameObject PhotoGraph2;
-    public GameObject Painting;
-    public GameObject Painting2;
     public GameObject Vase;
     public GameObject Vase2;
+    public GameObject Painting;
+    public GameObject Painting2;
+    public GameObject PhotoGraph;
+    public GameObject PhotoGraph2;
 
     public GameObject PhotoGraphChange;
   //  public GameObject PhotoGraph2Change;
