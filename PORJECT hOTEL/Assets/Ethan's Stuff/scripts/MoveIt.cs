@@ -26,6 +26,7 @@ public class MoveIt : MonoBehaviour
     void OnEnable()
     {
         Sprint.action.performed += Sprint_started;
+        Sprint.action.canceled -= Sprint_started;
         Interact.action.started += Interact_started;
     }
     private void Interact_started(InputAction.CallbackContext obj)

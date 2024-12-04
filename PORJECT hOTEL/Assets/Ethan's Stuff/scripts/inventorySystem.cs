@@ -18,6 +18,7 @@ public class inventorySystem : MonoBehaviour
     }
 
     //The error here is that referenceData is an invalid term
+    //Add and remove stuff from the inventory list and item dictionary
     /*public void Add(InventoryItem referenceData)
     {
         if(m_itemDictionary.TryGetValue(referenceData, out InventoryItem value))
@@ -43,7 +44,7 @@ public class inventorySystem : MonoBehaviour
             }
         }
         
-    }*/
+    }/**/
 }
 [Serializable]
 public class InventoryItem
