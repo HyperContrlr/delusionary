@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.iOS;
@@ -25,8 +26,14 @@ public class MoveIt : MonoBehaviour
     }
     void OnEnable()
     {
+        //When the button is held, it sprints
         Sprint.action.performed += Sprint_started;
+        Sprint.action.performed -= Sprint_cancelled;
+        //When the button is released, it stops
+        Sprint.action.canceled += Sprint_cancelled;
         Sprint.action.canceled -= Sprint_started;
+
+        //Other one button press stuff
         Interact.action.started += Interact_started;
     }
     private void Interact_started(InputAction.CallbackContext obj)
@@ -35,26 +42,19 @@ public class MoveIt : MonoBehaviour
     }
     private void Sprint_started(InputAction.CallbackContext obj)
     {
-        if (Sprint.action.IsInProgress())
-        {
-            activeMoveSpeed = moveSpeed * sprintMultiplier;
-        }
-        else if (!Sprint.action.IsInProgress()) 
-        {
-            activeMoveSpeed = moveSpeed;
-        }
+        activeMoveSpeed = moveSpeed * sprintMultiplier;
         Debug.Log("Sprint Pressed");
-        /*activeMoveSpeed = moveSpeed * sprintMultiplier;
-        if (Sprint.action.canceled -= )
-        {
-            Debug.Log("sprint Released");
-        }
-        /**/
+    }
+    private void Sprint_cancelled(InputAction.CallbackContext obj)
+    {
+        activeMoveSpeed = moveSpeed;
+        Debug.Log("Sprint Released");
     }
 
     void OnDisable()
     {
         Sprint.action.started -= Sprint_started;
+        Sprint.action.canceled += Sprint_cancelled;
         Interact.action.started -= Interact_started;
     }
     // Start is called before the first frame update
