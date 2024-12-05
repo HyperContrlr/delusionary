@@ -73,15 +73,6 @@ public class MoveIt : MonoBehaviour
         moveInput.Normalize();
 
         rb.velocity = moveInput * activeMoveSpeed;
-
-        /*if (controls.game.Sprint.IsInProgress())
-        {
-            activeMoveSpeed = moveSpeed * sprintMultiplier;
-        }
-        else
-        {
-            activeMoveSpeed = moveSpeed;
-        }
         /*if (Input.GetKey(KeyCode.W))
         {
             animator.SetInteger("WalkDirection", 1);
