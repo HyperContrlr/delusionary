@@ -10,9 +10,9 @@ public class Importance : Interact
     public string[] lines;
     public float textSpeed;
     private int index;
-
+    public GameObject ChoosingPanel;
     bool DialougeOpened;
-
+    bool ChoiceTime;
 
     public void Start()
     {
@@ -48,7 +48,24 @@ public class Importance : Interact
     {
         base.CloseInteract();
         DialougeOpened = false;
+        ChoiceTime = true;
     }
+    public void choiceTime()
+    { 
+        if (ChoiceTime == true)
+        {
+            ChoosingPanel.SetActive(true);  //Choosing();
+        }
+        else
+        {
+            return;
+        }
+
+    }
+    //public void Choosing()
+    //{
+    //    ChoosingPanel.SetActive(true);
+    //}
 
     public void NoMoreE()
     {
