@@ -46,32 +46,30 @@ public class Importance : Interact
 
     public override void CloseInteract()
     {
-        base.CloseInteract();
-        DialougeOpened = false;
-        ChoiceTime = true;
+        Canvas.SetActive(false);
+        choiceTime();
     }
     public void choiceTime()
     { 
-        if (ChoiceTime == true)
         {
-            ChoosingPanel.SetActive(true);  //Choosing();
+            ChoosingPanel.gameObject.SetActive(true);   
         }
-        else
-        {
-            return;
-        }
-
     }
-    //public void Choosing()
-    //{
-    //    ChoosingPanel.SetActive(true);
-    //}
 
-    public void NoMoreE()
+    public void NO()
+    {
+        ChoosingPanel.gameObject.SetActive(false);
+        DialougeOpened = false;
+        Time.timeScale = 1f;
+        noMoreE = false;
+    }
+
+public void NoMoreE()
     {
         if (noMoreE == true)
         {
             StartInteract();
+          //  ContinueInteract();
         }
         else
         {

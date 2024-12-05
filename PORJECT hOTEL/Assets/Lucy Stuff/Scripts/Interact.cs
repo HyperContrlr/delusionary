@@ -67,7 +67,7 @@ public abstract class Interact : MonoBehaviour
         {
             Canvas.gameObject.SetActive(false);
         }
-        else if (Input.GetMouseButtonDown(0))
+        else if (Input.GetMouseButtonDown(0) && noMoreE)
         {
             ContinueInteract();
         }
