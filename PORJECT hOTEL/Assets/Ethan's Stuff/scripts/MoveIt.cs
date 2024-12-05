@@ -54,7 +54,7 @@ public class MoveIt : MonoBehaviour
     void OnDisable()
     {
         Sprint.action.started -= Sprint_started;
-        Sprint.action.canceled += Sprint_cancelled;
+        Sprint.action.canceled -= Sprint_cancelled;
         Interact.action.started -= Interact_started;
     }
     // Start is called before the first frame update
