@@ -11,13 +11,6 @@ public class Mirror : MonoBehaviour
     public GameObject PhotoGraph;
     public GameObject PhotoGraph2;
 
-    public GameObject PhotoGraphChange;
-  //  public GameObject PhotoGraph2Change;
-    public GameObject PaintingChange;
-   // public GameObject Painting2Change;
-    public GameObject VaseChange;
-  //  public GameObject Vase2Change;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -30,28 +23,34 @@ public class Mirror : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-
-        if (VaseChange == true)
+   // void Update()
+   // {
+        public void VaseChange()
+    { 
+        //if (VaseChange == true)
         {
             Vase.SetActive(true);
             Vase2.SetActive(false);
         }
-
-        if (PaintingChange == true)
+    }
+    public void PaintingChange()
+    {
+        //if (PaintingChange == true)
         {
             Painting.SetActive(true);
             Painting2.SetActive(true);
             Vase.SetActive(false);
         }
-
-       if  (PhotoGraphChange == true)
+    }
+public void PhotoGraphChange()
+        { 
+      // if  (PhotoGraphChange == true)
         {
             PhotoGraph.SetActive(true);
             PhotoGraph2.SetActive(true);
             Painting.SetActive(false);
             Painting2.SetActive(false);
         }
-    }
+        }
+    //}
 }
