@@ -63,18 +63,18 @@ public class Importance : Interact
         Time.timeScale = 1f;
         noMoreE = false;
     }
-    public void YESVaseChange()
-    {
+    //public void YESVaseChange()
+    //{
 
-    }
-    public void YESPaintingChange()
-    {
+    //}
+    //public void YESPaintingChange()
+    //{
 
-    }
-    public void YESPhotoGraphChange()
-    {
+    //}
+    //public void YESPhotoGraphChange()
+    //{
 
-    }
+    //}
 
     public void NoMoreE()
     {

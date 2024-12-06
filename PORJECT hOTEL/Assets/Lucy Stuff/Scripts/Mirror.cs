@@ -29,27 +29,30 @@ public class Mirror : MonoBehaviour
     { 
         //if (VaseChange == true)
         {
-            Vase.SetActive(true);
-            Vase2.SetActive(false);
+            Vase.SetActive(!Vase.activeSelf);
+            Vase2.SetActive(!Vase.activeSelf);
+            Time.timeScale = 1f;
         }
     }
     public void PaintingChange()
     {
         //if (PaintingChange == true)
         {
-            Painting.SetActive(true);
-            Painting2.SetActive(true);
+            Painting.SetActive(!Painting.activeSelf);
+            Painting2.SetActive(!Painting.activeSelf);
             Vase.SetActive(false);
+            Time.timeScale = 1f;
         }
     }
 public void PhotoGraphChange()
         { 
       // if  (PhotoGraphChange == true)
         {
-            PhotoGraph.SetActive(true);
-            PhotoGraph2.SetActive(true);
+            PhotoGraph.SetActive(!PhotoGraph.activeSelf);
+            PhotoGraph2.SetActive(!PhotoGraph.activeSelf);
             Painting.SetActive(false);
             Painting2.SetActive(false);
+            Time.timeScale = 1f;
         }
         }
     //}
