@@ -10,3 +10,9 @@ public class itemData : ScriptableObject
     public GameObject prefab;
     public string description;
 }
+
+
+
+//I was working on an inventory system,
+//but I decided I hated it,
+//so I deleted it, and am starting it over
