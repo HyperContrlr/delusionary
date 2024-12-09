@@ -15,7 +15,6 @@ public class item : MonoBehaviour
         - second number indicates which item it is within that puzzle
         An example would be the ID 24, which would be the 4th item in the 2nd puzzle */
         public int ID;
-        //We'll prolly need a Unity Event system for the inspect thing, but we'll worry about that later
         public string inspectText;
         public Item(string name, int ID, string inspectText)
         {
