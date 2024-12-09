@@ -308,11 +308,24 @@ MonoBehaviour:
   canInteract: 0
   Canvas: {fileID: 2134360168}
   noMoreE: 0
+  Vase: {fileID: 0}
+  Vas: {fileID: 0}
+  Vase2: {fileID: 0}
+  Vas2: {fileID: 0}
+  Painting: {fileID: 0}
+  Paint: {fileID: 0}
+  Painting2: {fileID: 0}
+  Paint2: {fileID: 0}
+  PhotoGraph: {fileID: 0}
+  Photo: {fileID: 0}
+  PhotoGraph2: {fileID: 0}
+  Photo2: {fileID: 0}
   textComponent: {fileID: 716292570}
   lines:
   - Do I wanna do the thing
   textSpeed: 0.1
   ChoosingPanel: {fileID: 1018320890}
+  DialougeOpened: 0
 --- !u!65 &4973175
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2762,11 +2775,24 @@ MonoBehaviour:
   canInteract: 0
   Canvas: {fileID: 322570655}
   noMoreE: 0
+  Vase: {fileID: 0}
+  Vas: {fileID: 0}
+  Vase2: {fileID: 0}
+  Vas2: {fileID: 0}
+  Painting: {fileID: 0}
+  Paint: {fileID: 0}
+  Painting2: {fileID: 0}
+  Paint2: {fileID: 0}
+  PhotoGraph: {fileID: 0}
+  Photo: {fileID: 0}
+  PhotoGraph2: {fileID: 0}
+  Photo2: {fileID: 0}
   textComponent: {fileID: 1512172968}
   lines:
   - Do I wanna do the thing
   textSpeed: 0.1
   ChoosingPanel: {fileID: 1365900339}
+  DialougeOpened: 0
 --- !u!65 &407934714
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3113,11 +3139,24 @@ MonoBehaviour:
   canInteract: 0
   Canvas: {fileID: 1526341493}
   noMoreE: 0
+  Vase: {fileID: 1943273957}
+  Vas: {fileID: 1176712349}
+  Vase2: {fileID: 724221607}
+  Vas2: {fileID: 1139834349}
+  Painting: {fileID: 4973172}
+  Paint: {fileID: 518236029}
+  Painting2: {fileID: 1154953199}
+  Paint2: {fileID: 407934711}
+  PhotoGraph: {fileID: 1435249806}
+  Photo: {fileID: 1116138796}
+  PhotoGraph2: {fileID: 1570630537}
+  Photo2: {fileID: 615673144}
   textComponent: {fileID: 298681179}
   lines:
   - Do I wanna do the thing
   textSpeed: 0.1
   ChoosingPanel: {fileID: 1453766613}
+  DialougeOpened: 0
 --- !u!54 &518236032
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3697,11 +3736,24 @@ MonoBehaviour:
   canInteract: 0
   Canvas: {fileID: 2058132669}
   noMoreE: 0
+  Vase: {fileID: 0}
+  Vas: {fileID: 0}
+  Vase2: {fileID: 0}
+  Vas2: {fileID: 0}
+  Painting: {fileID: 0}
+  Paint: {fileID: 0}
+  Painting2: {fileID: 0}
+  Paint2: {fileID: 0}
+  PhotoGraph: {fileID: 0}
+  Photo: {fileID: 0}
+  PhotoGraph2: {fileID: 0}
+  Photo2: {fileID: 0}
   textComponent: {fileID: 190488841}
   lines:
   - Do I wanna do the thing
   textSpeed: 0.1
   ChoosingPanel: {fileID: 738368389}
+  DialougeOpened: 0
 --- !u!65 &615673147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4553,11 +4605,24 @@ MonoBehaviour:
   canInteract: 0
   Canvas: {fileID: 1958974060}
   noMoreE: 0
+  Vase: {fileID: 0}
+  Vas: {fileID: 0}
+  Vase2: {fileID: 0}
+  Vas2: {fileID: 0}
+  Painting: {fileID: 0}
+  Paint: {fileID: 0}
+  Painting2: {fileID: 0}
+  Paint2: {fileID: 0}
+  PhotoGraph: {fileID: 0}
+  Photo: {fileID: 0}
+  PhotoGraph2: {fileID: 0}
+  Photo2: {fileID: 0}
   textComponent: {fileID: 2141364157}
   lines:
   - Do I wanna do the thing
   textSpeed: 0.1
   ChoosingPanel: {fileID: 111805968}
+  DialougeOpened: 0
 --- !u!54 &724221610
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6219,12 +6284,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37d98bdd6d3b9dd41bb7c42c174f8ced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Vase: {fileID: 1139834349}
-  Vase2: {fileID: 1943273957}
-  Painting: {fileID: 407934711}
-  Painting2: {fileID: 4973172}
-  PhotoGraph: {fileID: 615673144}
-  PhotoGraph2: {fileID: 1435249806}
+  Vase: {fileID: 1943273957}
+  Vas: {fileID: 1176712349}
+  Vase2: {fileID: 724221607}
+  Vas2: {fileID: 1139834349}
+  Painting: {fileID: 4973172}
+  Paint: {fileID: 518236029}
+  Painting2: {fileID: 1154953199}
+  Paint2: {fileID: 407934711}
+  PhotoGraph: {fileID: 1435249806}
+  Photo: {fileID: 1116138796}
+  PhotoGraph2: {fileID: 1570630537}
+  Photo2: {fileID: 615673144}
 --- !u!4 &1012388332
 Transform:
   m_ObjectHideFlags: 0
@@ -6775,11 +6846,24 @@ MonoBehaviour:
   canInteract: 0
   Canvas: {fileID: 664078443}
   noMoreE: 0
+  Vase: {fileID: 1943273957}
+  Vas: {fileID: 1176712349}
+  Vase2: {fileID: 724221607}
+  Vas2: {fileID: 1139834349}
+  Painting: {fileID: 4973172}
+  Paint: {fileID: 518236029}
+  Painting2: {fileID: 1154953199}
+  Paint2: {fileID: 407934711}
+  PhotoGraph: {fileID: 1435249806}
+  Photo: {fileID: 1116138796}
+  PhotoGraph2: {fileID: 1570630537}
+  Photo2: {fileID: 615673144}
   textComponent: {fileID: 431855387}
   lines:
   - Do I wanna do the thing
   textSpeed: 0.1
   ChoosingPanel: {fileID: 1383030638}
+  DialougeOpened: 0
 --- !u!54 &1116138799
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6912,11 +6996,24 @@ MonoBehaviour:
   canInteract: 0
   Canvas: {fileID: 204213871}
   noMoreE: 0
+  Vase: {fileID: 0}
+  Vas: {fileID: 0}
+  Vase2: {fileID: 0}
+  Vas2: {fileID: 0}
+  Painting: {fileID: 0}
+  Paint: {fileID: 0}
+  Painting2: {fileID: 0}
+  Paint2: {fileID: 0}
+  PhotoGraph: {fileID: 0}
+  Photo: {fileID: 0}
+  PhotoGraph2: {fileID: 0}
+  Photo2: {fileID: 0}
   textComponent: {fileID: 1619694388}
   lines:
   - Do I wanna do the thing
   textSpeed: 0.1
   ChoosingPanel: {fileID: 1296472082}
+  DialougeOpened: 0
 --- !u!65 &1139834353
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7049,11 +7146,24 @@ MonoBehaviour:
   canInteract: 0
   Canvas: {fileID: 2120415756}
   noMoreE: 0
+  Vase: {fileID: 0}
+  Vas: {fileID: 0}
+  Vase2: {fileID: 0}
+  Vas2: {fileID: 0}
+  Painting: {fileID: 0}
+  Paint: {fileID: 0}
+  Painting2: {fileID: 0}
+  Paint2: {fileID: 0}
+  PhotoGraph: {fileID: 0}
+  Photo: {fileID: 0}
+  PhotoGraph2: {fileID: 0}
+  Photo2: {fileID: 0}
   textComponent: {fileID: 407043520}
   lines:
   - Do I wanna do the thing
   textSpeed: 0.1
   ChoosingPanel: {fileID: 1333933962}
+  DialougeOpened: 0
 --- !u!54 &1154953202
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7423,11 +7533,24 @@ MonoBehaviour:
   canInteract: 0
   Canvas: {fileID: 195601992}
   noMoreE: 0
+  Vase: {fileID: 1943273957}
+  Vas: {fileID: 1176712349}
+  Vase2: {fileID: 724221607}
+  Vas2: {fileID: 1139834349}
+  Painting: {fileID: 4973172}
+  Paint: {fileID: 518236029}
+  Painting2: {fileID: 1154953199}
+  Paint2: {fileID: 407934711}
+  PhotoGraph: {fileID: 1435249806}
+  Photo: {fileID: 1116138796}
+  PhotoGraph2: {fileID: 1570630537}
+  Photo2: {fileID: 615673144}
   textComponent: {fileID: 28717210}
   lines:
   - Do I wanna do the thing
   textSpeed: 0.1
   ChoosingPanel: {fileID: 1250647135}
+  DialougeOpened: 0
 --- !u!54 &1176712352
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9109,11 +9232,24 @@ MonoBehaviour:
   canInteract: 0
   Canvas: {fileID: 121409777}
   noMoreE: 0
+  Vase: {fileID: 0}
+  Vas: {fileID: 0}
+  Vase2: {fileID: 0}
+  Vas2: {fileID: 0}
+  Painting: {fileID: 0}
+  Paint: {fileID: 0}
+  Painting2: {fileID: 0}
+  Paint2: {fileID: 0}
+  PhotoGraph: {fileID: 0}
+  Photo: {fileID: 0}
+  PhotoGraph2: {fileID: 0}
+  Photo2: {fileID: 0}
   textComponent: {fileID: 685290469}
   lines:
   - Do I wanna do the thing
   textSpeed: 0.1
   ChoosingPanel: {fileID: 1173874801}
+  DialougeOpened: 0
 --- !u!65 &1435249809
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9875,11 +10011,24 @@ MonoBehaviour:
   canInteract: 0
   Canvas: {fileID: 1024136466}
   noMoreE: 0
+  Vase: {fileID: 0}
+  Vas: {fileID: 0}
+  Vase2: {fileID: 0}
+  Vas2: {fileID: 0}
+  Painting: {fileID: 0}
+  Paint: {fileID: 0}
+  Painting2: {fileID: 0}
+  Paint2: {fileID: 0}
+  PhotoGraph: {fileID: 0}
+  Photo: {fileID: 0}
+  PhotoGraph2: {fileID: 0}
+  Photo2: {fileID: 0}
   textComponent: {fileID: 663500940}
   lines:
   - Do I wanna do the thing
   textSpeed: 0.1
   ChoosingPanel: {fileID: 1288700332}
+  DialougeOpened: 0
 --- !u!54 &1570630540
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12773,11 +12922,24 @@ MonoBehaviour:
   canInteract: 0
   Canvas: {fileID: 573722880}
   noMoreE: 0
+  Vase: {fileID: 0}
+  Vas: {fileID: 0}
+  Vase2: {fileID: 0}
+  Vas2: {fileID: 0}
+  Painting: {fileID: 0}
+  Paint: {fileID: 0}
+  Painting2: {fileID: 0}
+  Paint2: {fileID: 0}
+  PhotoGraph: {fileID: 0}
+  Photo: {fileID: 0}
+  PhotoGraph2: {fileID: 0}
+  Photo2: {fileID: 0}
   textComponent: {fileID: 544311320}
   lines:
   - Do I wanna do the thing
   textSpeed: 0.1
   ChoosingPanel: {fileID: 1791053163}
+  DialougeOpened: 0
 --- !u!65 &1943273960
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12849,7 +13011,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943273957}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -511.6, y: -212.5817, z: 1.8856579}
+  m_LocalPosition: {x: -511.59, y: -212.5817, z: 1.8856579}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
