@@ -33,16 +33,18 @@ public class Importance : Interact
         textComponent.text = string.Empty;
 
         Vase.SetActive(false);
-        Vase2.SetActive(true);
         Vas.SetActive(true);
+        Vase2.SetActive(true);
         Vas2.SetActive(false);
+
         Painting.SetActive(false);
-        Painting2.SetActive(false);
         Paint.SetActive(true);
+        Painting2.SetActive(false);
         Paint2.SetActive(true);
+
         PhotoGraph.SetActive(true);
-        PhotoGraph2.SetActive(true);
         Photo.SetActive(false);
+        PhotoGraph2.SetActive(true);
         Photo2.SetActive(false);
     }
 
@@ -83,12 +85,20 @@ public class Importance : Interact
         }
     }
 
+    public void choiceTimeOver()
+    {
+        Time.timeScale = 1f;
+        DialougeOpened = false;
+        noMoreE = false;
+        ChoosingPanel.gameObject.SetActive(false);
+    }
+
     public void NO()
     {
-        ChoosingPanel.gameObject.SetActive(false);
         DialougeOpened = false;
         Time.timeScale = 1f;
         noMoreE = false;
+        ChoosingPanel.gameObject.SetActive(false);
     }
     public void VaseChange()
     {
@@ -98,49 +108,53 @@ public class Importance : Interact
             Vase2.SetActive(!Vase.activeSelf);
             Vas2.SetActive(!Vas2.activeSelf);
 
-            Time.timeScale = 1f;
-            ChoosingPanel.gameObject.SetActive(false);
-            DialougeOpened = false;
-            noMoreE = false;
+          choiceTimeOver();
         }
     }
 
     public void PaintingChange()
     {
         {
+            Vase.SetActive(false);
+            Vas.SetActive(true);
             Painting.SetActive(!Painting.activeSelf);
             Paint.SetActive(!Painting.activeSelf);
             Painting2.SetActive(!Painting.activeSelf);
             Paint2.SetActive(!Painting2.activeSelf);
-            Vase.SetActive(false);
-            Vas.SetActive(true);
 
             Time.timeScale = 1f;
-            ChoosingPanel.gameObject.SetActive(false);
             DialougeOpened = false;
             noMoreE = false;
+            ChoosingPanel.gameObject.SetActive(false);
         }
     }
 
     public void PhotoGraphChange()
     {
         {
-            PhotoGraph.SetActive(!PhotoGraph.activeSelf);
-            Photo.SetActive(!PhotoGraph.activeSelf);
-            PhotoGraph2.SetActive(!PhotoGraph.activeSelf);
-            Photo2.SetActive(!PhotoGraph2.activeSelf);
             Painting.SetActive(false);
             Painting2.SetActive(false);
             Paint.SetActive(true);
             Paint2.SetActive(true);
+            PhotoGraph.SetActive(!PhotoGraph.activeSelf);
+            Photo.SetActive(!PhotoGraph.activeSelf);
+            PhotoGraph2.SetActive(!PhotoGraph.activeSelf);
+            Photo2.SetActive(!PhotoGraph2.activeSelf);
 
             Time.timeScale = 1f;
-            ChoosingPanel.gameObject.SetActive(false);
             DialougeOpened = false;
             noMoreE = false;
+            ChoosingPanel.gameObject.SetActive(false);
         }
     }
 
+    //public void Win()
+    //{
+    //    if (Vase.SetActive(true) && Vas.SetActive(true) && Painting.SetActive(false) && Paint2.SetActive(false) && PhotoGraph(true) && Photo.SetActive(true) ) 
+    //    {
+
+    //    }
+    //}
         public void NoMoreE()
     {
         if (noMoreE == true)
