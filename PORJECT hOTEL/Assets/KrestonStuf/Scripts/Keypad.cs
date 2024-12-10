@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Keypad : MonoBehaviour
 {
-    public bool complete = false;
-    public bool click1 = false;
-    public bool click2 = false;
-    public char key1 = 'x';
-    public char key2 = 'x';
+    private bool complete = false;
+    private bool click1 = false;
+    private bool click2 = false;
+    private char key1 = 'x';
+    private char key2 = 'x';
 
     public void afterClick2()
     {
