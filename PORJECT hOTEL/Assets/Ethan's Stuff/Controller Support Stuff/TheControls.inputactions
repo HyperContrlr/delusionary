@@ -49,6 +49,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Open Inventory",
+                    "type": "Button",
+                    "id": "81f61e44-8820-4981-8734-289cdb02f940",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -161,6 +170,28 @@
                     "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1354c8cd-e95e-41e1-ae95-d34679fcac3c",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "Open Inventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bfbe8f57-f83c-44d8-a529-36a5f9dc5bad",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "Open Inventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -209,6 +240,45 @@
                     "processors": "",
                     "groups": "",
                     "action": "Progress Dialogue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "inventory",
+            "id": "a994701e-56d8-4f5a-b811-ae88568d0d89",
+            "actions": [
+                {
+                    "name": "close inventory",
+                    "type": "Button",
+                    "id": "1a57d52b-5b07-45a9-b8f4-86a8606e578d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b423bd63-41a7-4a51-ae25-6559934920f3",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "close inventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "31d6a131-2eca-438a-9a07-657f58350ba7",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "close inventory",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

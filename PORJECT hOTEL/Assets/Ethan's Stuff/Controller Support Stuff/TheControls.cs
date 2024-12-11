@@ -71,6 +71,15 @@ public partial class @TheControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Open Inventory"",
+                    ""type"": ""Button"",
+                    ""id"": ""81f61e44-8820-4981-8734-289cdb02f940"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -183,6 +192,28 @@ public partial class @TheControls : IInputActionCollection2, IDisposable
                     ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1354c8cd-e95e-41e1-ae95-d34679fcac3c"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""Open Inventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bfbe8f57-f83c-44d8-a529-36a5f9dc5bad"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""Open Inventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -235,6 +266,45 @@ public partial class @TheControls : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""inventory"",
+            ""id"": ""a994701e-56d8-4f5a-b811-ae88568d0d89"",
+            ""actions"": [
+                {
+                    ""name"": ""close inventory"",
+                    ""type"": ""Button"",
+                    ""id"": ""1a57d52b-5b07-45a9-b8f4-86a8606e578d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""b423bd63-41a7-4a51-ae25-6559934920f3"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""close inventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""31d6a131-2eca-438a-9a07-657f58350ba7"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""close inventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -263,9 +333,13 @@ public partial class @TheControls : IInputActionCollection2, IDisposable
         m_game_Pause = m_game.FindAction("Pause", throwIfNotFound: true);
         m_game_InventoryL = m_game.FindAction("Inventory L", throwIfNotFound: true);
         m_game_InventoryR = m_game.FindAction("Inventory R", throwIfNotFound: true);
+        m_game_OpenInventory = m_game.FindAction("Open Inventory", throwIfNotFound: true);
         // dialogue
         m_dialogue = asset.FindActionMap("dialogue", throwIfNotFound: true);
         m_dialogue_ProgressDialogue = m_dialogue.FindAction("Progress Dialogue", throwIfNotFound: true);
+        // inventory
+        m_inventory = asset.FindActionMap("inventory", throwIfNotFound: true);
+        m_inventory_closeinventory = m_inventory.FindAction("close inventory", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -330,6 +404,7 @@ public partial class @TheControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_game_Pause;
     private readonly InputAction m_game_InventoryL;
     private readonly InputAction m_game_InventoryR;
+    private readonly InputAction m_game_OpenInventory;
     public struct GameActions
     {
         private @TheControls m_Wrapper;
@@ -339,6 +414,7 @@ public partial class @TheControls : IInputActionCollection2, IDisposable
         public InputAction @Pause => m_Wrapper.m_game_Pause;
         public InputAction @InventoryL => m_Wrapper.m_game_InventoryL;
         public InputAction @InventoryR => m_Wrapper.m_game_InventoryR;
+        public InputAction @OpenInventory => m_Wrapper.m_game_OpenInventory;
         public InputActionMap Get() { return m_Wrapper.m_game; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -363,6 +439,9 @@ public partial class @TheControls : IInputActionCollection2, IDisposable
                 @InventoryR.started -= m_Wrapper.m_GameActionsCallbackInterface.OnInventoryR;
                 @InventoryR.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnInventoryR;
                 @InventoryR.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnInventoryR;
+                @OpenInventory.started -= m_Wrapper.m_GameActionsCallbackInterface.OnOpenInventory;
+                @OpenInventory.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnOpenInventory;
+                @OpenInventory.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnOpenInventory;
             }
             m_Wrapper.m_GameActionsCallbackInterface = instance;
             if (instance != null)
@@ -382,6 +461,9 @@ public partial class @TheControls : IInputActionCollection2, IDisposable
                 @InventoryR.started += instance.OnInventoryR;
                 @InventoryR.performed += instance.OnInventoryR;
                 @InventoryR.canceled += instance.OnInventoryR;
+                @OpenInventory.started += instance.OnOpenInventory;
+                @OpenInventory.performed += instance.OnOpenInventory;
+                @OpenInventory.canceled += instance.OnOpenInventory;
             }
         }
     }
@@ -419,6 +501,39 @@ public partial class @TheControls : IInputActionCollection2, IDisposable
         }
     }
     public DialogueActions @dialogue => new DialogueActions(this);
+
+    // inventory
+    private readonly InputActionMap m_inventory;
+    private IInventoryActions m_InventoryActionsCallbackInterface;
+    private readonly InputAction m_inventory_closeinventory;
+    public struct InventoryActions
+    {
+        private @TheControls m_Wrapper;
+        public InventoryActions(@TheControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @closeinventory => m_Wrapper.m_inventory_closeinventory;
+        public InputActionMap Get() { return m_Wrapper.m_inventory; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(InventoryActions set) { return set.Get(); }
+        public void SetCallbacks(IInventoryActions instance)
+        {
+            if (m_Wrapper.m_InventoryActionsCallbackInterface != null)
+            {
+                @closeinventory.started -= m_Wrapper.m_InventoryActionsCallbackInterface.OnCloseinventory;
+                @closeinventory.performed -= m_Wrapper.m_InventoryActionsCallbackInterface.OnCloseinventory;
+                @closeinventory.canceled -= m_Wrapper.m_InventoryActionsCallbackInterface.OnCloseinventory;
+            }
+            m_Wrapper.m_InventoryActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @closeinventory.started += instance.OnCloseinventory;
+                @closeinventory.performed += instance.OnCloseinventory;
+                @closeinventory.canceled += instance.OnCloseinventory;
+            }
+        }
+    }
+    public InventoryActions @inventory => new InventoryActions(this);
     private int m_ControllerSchemeIndex = -1;
     public InputControlScheme ControllerScheme
     {
@@ -435,9 +550,14 @@ public partial class @TheControls : IInputActionCollection2, IDisposable
         void OnPause(InputAction.CallbackContext context);
         void OnInventoryL(InputAction.CallbackContext context);
         void OnInventoryR(InputAction.CallbackContext context);
+        void OnOpenInventory(InputAction.CallbackContext context);
     }
     public interface IDialogueActions
     {
         void OnProgressDialogue(InputAction.CallbackContext context);
+    }
+    public interface IInventoryActions
+    {
+        void OnCloseinventory(InputAction.CallbackContext context);
     }
 }
