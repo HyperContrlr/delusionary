@@ -33,27 +33,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Inventory L",
+                    "name": "Inventory",
                     "type": "Button",
-                    "id": "1eb3090a-2122-4be3-9cad-7af05818665c",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Inventory R",
-                    "type": "Button",
-                    "id": "e33ee82c-aeb4-44b3-ba73-f5db6142f97a",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Open Inventory",
-                    "type": "Button",
-                    "id": "81f61e44-8820-4981-8734-289cdb02f940",
+                    "id": "e68d84fa-cc7d-4c06-a271-11a251f76f24",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -107,50 +89,6 @@
                 },
                 {
                     "name": "",
-                    "id": "676add89-d6fa-497e-97dd-307f333da5d4",
-                    "path": "<Gamepad>/dpad/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Inventory L",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "06531f8c-8efc-4955-9895-6ae20b48ecac",
-                    "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Controller",
-                    "action": "Inventory L",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b4420e1a-d80e-4668-b72f-3232cbcdb66a",
-                    "path": "<Gamepad>/dpad/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Inventory R",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "69d8ee4f-0a0a-4087-8979-2fd0a9185e5b",
-                    "path": "<Keyboard>/f",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Controller",
-                    "action": "Inventory R",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "c5de96d7-64fd-4754-88bb-32aaaf5c637b",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
@@ -173,23 +111,23 @@
                 },
                 {
                     "name": "",
-                    "id": "1354c8cd-e95e-41e1-ae95-d34679fcac3c",
+                    "id": "2e4b2940-25b6-4282-aa2f-e98f7c5a9bbd",
                     "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
                     "groups": "Controller",
-                    "action": "Open Inventory",
+                    "action": "Inventory",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "bfbe8f57-f83c-44d8-a529-36a5f9dc5bad",
+                    "id": "bed82387-54ae-45ec-ac0a-6313817d9e2b",
                     "path": "<Keyboard>/tab",
                     "interactions": "",
                     "processors": "",
                     "groups": "Controller",
-                    "action": "Open Inventory",
+                    "action": "Inventory",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -240,45 +178,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Progress Dialogue",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "inventory",
-            "id": "a994701e-56d8-4f5a-b811-ae88568d0d89",
-            "actions": [
-                {
-                    "name": "close inventory",
-                    "type": "Button",
-                    "id": "1a57d52b-5b07-45a9-b8f4-86a8606e578d",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "b423bd63-41a7-4a51-ae25-6559934920f3",
-                    "path": "<Gamepad>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Controller",
-                    "action": "close inventory",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "31d6a131-2eca-438a-9a07-657f58350ba7",
-                    "path": "<Keyboard>/tab",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Controller",
-                    "action": "close inventory",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
