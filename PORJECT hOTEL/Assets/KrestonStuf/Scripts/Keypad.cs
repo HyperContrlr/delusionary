@@ -27,6 +27,7 @@ public class Keypad : MonoBehaviour
             click1 = false;
             click2 = false;
             clickable = true;
+
         }
     }
     public void onSquareClick()
