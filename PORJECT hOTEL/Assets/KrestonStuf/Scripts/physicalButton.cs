@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class physicalButton : MonoBehaviour
 {
-    public UnityEvent onCLick;
+    public UnityEvent onClick;
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -12,7 +12,7 @@ public class physicalButton : MonoBehaviour
 
             if (Physics.Raycast(ray, out RaycastHit hitInfo) && hitInfo.collider.gameObject == gameObject)
             {
-                onCLick.Invoke();
+                onClick.Invoke();
             }
         }
     }
