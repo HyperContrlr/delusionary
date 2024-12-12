@@ -1,84 +1,233 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Keypad : MonoBehaviour
 {
     //☈ΩΞϟΨ
-    private bool clickable = true;
-    private bool complete = false;
-    private bool click1 = false;
-    private bool click2 = false;
-    private char key1 = 'x';
-    private char key2 = 'x';
+    public bool clickable = true;
+    public bool complete = false;
+    public bool click1 = false;
+    public char key1 = 'x';
+    public char key2 = 'x';
     public string VMText = string.Empty;
+    public int delayTime = 2;
+    public TMPro.TMP_Text digits;
+
 
     public void afterClick2()
     {
-        if ((key1 == '5') && (key2 == 'l'))
+        if ((key1 == '5') && (key2 == 'ϟ'))
         {
             complete = true;
             clickable = false;
-            VMText = char.ToString(key1) + char.ToString(key2);
         }
         else
         {
-            key1 = 'x';
-            key2 = 'x';
+            VMText = string.Empty;
+            key1 = ' ';
+            key2 = ' ';
             click1 = false;
-            click2 = false;
             clickable = true;
         }
     }
     public void onSquareClick() 
     {
-        if (clickable = true && (click1 = true) && (click2 = false))
+        if (clickable == true)
         {
-            click2 = true;
-            key2 = '☈';
-            afterClick2();
-        }
-        if (clickable = true && (click1 = false))
-        {
-            click1 = true;
-            key1 = '☈';
-            clickable = true;
+            if ((click1 == false))
+            {
+                click1 = true;
+                key1 = '☈';
+                clickable = true;
+
+                digits.SetText((key1 + key2).ToString());
+            }
+            else
+            {
+                key2 = '☈';
+                StartCoroutine(TimeBeforeReset()); 
+                digits.SetText((key1 + key2).ToString());
+            }
         }
     }
     public void onOmegaClick()
     {
-        
+        if (clickable == true)
+        {
+            if ((click1 == false))
+            {
+                click1 = true;
+                key1 = 'Ω';
+                clickable = true;
+                digits.SetText((key1 + key2).ToString());
+            }
+            else
+            {
+                key2 = 'Ω';
+                StartCoroutine(TimeBeforeReset());
+                digits.SetText((key1 + key2).ToString());
+            }
+        }
     }
     public void onLinesClick()
     {
-
+        if (clickable == true)
+        {
+            if ((click1 == false))
+            {
+                click1 = true;
+                key1 = 'Ξ';
+                clickable = true;
+                digits.SetText((key1 + key2).ToString());
+            }
+            else
+            {
+                key2 = 'Ξ';
+                StartCoroutine(TimeBeforeReset());
+                digits.SetText((key1 + key2).ToString());
+            }
+        }
     }
     public void onBoltClick()
     {
-        
+        if (clickable == true)
+        {
+            if ((click1 == false))
+            {
+                click1 = true;
+                key1 = 'ϟ';
+                clickable = true;
+                digits.SetText((key1 + key2).ToString());
+            }
+            else
+            {
+                key2 = 'ϟ';
+                StartCoroutine(TimeBeforeReset());
+                digits.SetText((key1 + key2).ToString());
+            }
+        }
     }
     public void onForkClick()
     {
-        
+        if (clickable == true)
+        {
+            if ((click1 == false))
+            {
+                click1 = true;
+                key1 = 'Ψ';
+                clickable = true;
+                digits.SetText((key1 + key2).ToString());
+            }
+            else
+            {
+                key2 = 'Ψ';
+                StartCoroutine(TimeBeforeReset());
+                digits.SetText((key1 + key2).ToString());
+            }
+        }
     }
     public void on1Click()
     {
-       
+        if (clickable == true)
+        {
+            if ((click1 == false))
+            {
+                click1 = true;
+                key1 = '1';
+                clickable = true;
+                digits.SetText((key1 + key2).ToString());
+            }
+            else
+            {
+                key2 = '1';
+                StartCoroutine(TimeBeforeReset());
+                digits.SetText((key1 + key2).ToString());
+            }
+        }
     }
     public void on2Click()
     {
-        
+        if (clickable == true)
+        {
+            if ((click1 == false))
+            {
+                click1 = true;
+                key1 = '2';
+                clickable = true;
+                digits.SetText((key1 + key2).ToString());
+            }
+            else
+            {
+                key2 = '2';
+                StartCoroutine(TimeBeforeReset());
+                digits.SetText((key1 + key2).ToString());
+            }
+        }
     }
     public void on3Click()
     {
-       
+        if (clickable == true)
+        {
+            if ((click1 == false))
+            {
+                click1 = true;
+                key1 = '3';
+                clickable = true;
+                digits.SetText((key1 + key2).ToString());
+            }
+            else
+            {
+                key2 = '3';
+                StartCoroutine(TimeBeforeReset());
+                digits.SetText((key1 + key2).ToString());
+            }
+        }
     }
     public void on4Click()
     {
-       
+        if (clickable == true)
+        {
+            if ((click1 == false))
+            {
+                click1 = true;
+                key1 = '4';
+                clickable = true;
+                digits.SetText((key1 + key2).ToString());
+            }
+            else
+            {
+                key2 = '4';
+                StartCoroutine(TimeBeforeReset());
+                digits.SetText((key1 + key2).ToString());
+            }
+        }
     }
     public void on5Click()
     {
-
+        if (clickable == true)
+        {
+            if ((click1 == false))
+            {
+                click1 = true;
+                key1 = '5';
+                clickable = true;
+                digits.SetText((key1 + key2).ToString());
+            }
+            else
+            {
+                key2 = '5';
+                StartCoroutine(TimeBeforeReset());
+                digits.SetText((key1 + key2).ToString());
+            }
+        }
+    }
+    IEnumerator TimeBeforeReset()
+    {
+        clickable = false;
+        VMText = char.ToString(key1) + char.ToString(key2);
+        print(Time.time);
+        yield return new WaitForSeconds(delayTime);
+        print(Time.time);
+        afterClick2();
     }
 }
