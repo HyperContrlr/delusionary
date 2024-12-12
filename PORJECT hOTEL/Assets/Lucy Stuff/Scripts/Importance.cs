@@ -7,10 +7,10 @@ using static Unity.Burst.Intrinsics.X86;
 
 public class Importance : Interact 
 {
-    public GameObject Vase;
-    public GameObject Vas;
-    public GameObject Vase2;
-    public GameObject Vas2;
+    public GameObject VaseLL;
+    public GameObject VaseRL;
+    public GameObject VaseLR;
+    public GameObject VaseRR;
     public GameObject Painting;
     public GameObject Paint;
     public GameObject Painting2;
@@ -25,17 +25,17 @@ public class Importance : Interact
     public float textSpeed;
     private int index;
     public GameObject ChoosingPanel;
-   public bool DialougeOpened;
-    bool ChoiceTime;
+    public bool DialougeOpened;
+    public bool ChoiceTime;
 
     public void Start()
     {
         textComponent.text = string.Empty;
 
-        Vase.SetActive(false);
-        Vas.SetActive(true);
-        Vase2.SetActive(true);
-        Vas2.SetActive(false);
+        VaseLL.SetActive(false);
+        VaseRL.SetActive(true);
+        VaseLR.SetActive(true);
+        VaseRR.SetActive(false);
 
         Painting.SetActive(false);
         Paint.SetActive(true);
@@ -76,21 +76,26 @@ public class Importance : Interact
     public override void CloseInteract()
     {
         Canvas.SetActive(false);
+        ChoiceTime = true;
         choiceTime();
     }
     public void choiceTime()
-    { 
+    {
+        if (ChoiceTime == true)
         {
-            ChoosingPanel.gameObject.SetActive(true);   
+            ChoosingPanel.SetActive(true);   
         }
     }
 
     public void choiceTimeOver()
     {
-        Time.timeScale = 1f;
-        DialougeOpened = false;
-        noMoreE = false;
-        ChoosingPanel.gameObject.SetActive(false);
+        if (ChoiceTime == false)
+        {
+            Time.timeScale = 1f;
+            DialougeOpened = false;
+            noMoreE = false;
+            ChoosingPanel.gameObject.SetActive(false);
+        }
     }
 
     public void NO()
@@ -103,48 +108,42 @@ public class Importance : Interact
     public void VaseChange()
     {
         {
-            Vase.SetActive(!Vase.activeSelf);
-            Vas.SetActive(!Vas.activeSelf);
-            Vase2.SetActive(!Vase.activeSelf);
-            Vas2.SetActive(!Vas2.activeSelf);
-
-          choiceTimeOver();
+            VaseLL.SetActive(!VaseLL.activeSelf);
+            VaseRL.SetActive(!VaseRL.activeSelf);
+            VaseLR.SetActive(!VaseLR.activeSelf);
+            VaseRR.SetActive(!VaseRR.activeSelf);
+            ChoiceTime = false;
+            choiceTimeOver();
         }
     }
 
     public void PaintingChange()
     {
         {
-            Vase.SetActive(false);
-            Vas.SetActive(true);
+            //Vase.SetActive(false);
+            //Vas.SetActive(true);
             Painting.SetActive(!Painting.activeSelf);
-            Paint.SetActive(!Painting.activeSelf);
-            Painting2.SetActive(!Painting.activeSelf);
-            Paint2.SetActive(!Painting2.activeSelf);
+            Paint.SetActive(!Paint.activeSelf);
+            Painting2.SetActive(!Painting2.activeSelf);
+            Paint2.SetActive(!Paint2.activeSelf);
 
-            Time.timeScale = 1f;
-            DialougeOpened = false;
-            noMoreE = false;
-            ChoosingPanel.gameObject.SetActive(false);
+            ChoiceTime = false;
         }
     }
 
     public void PhotoGraphChange()
     {
         {
-            Painting.SetActive(false);
-            Painting2.SetActive(false);
-            Paint.SetActive(true);
-            Paint2.SetActive(true);
+            //Painting.SetActive(false);
+            //Painting2.SetActive(false);
+            //Paint.SetActive(true);
+            //Paint2.SetActive(true);
             PhotoGraph.SetActive(!PhotoGraph.activeSelf);
-            Photo.SetActive(!PhotoGraph.activeSelf);
-            PhotoGraph2.SetActive(!PhotoGraph.activeSelf);
-            Photo2.SetActive(!PhotoGraph2.activeSelf);
+            Photo.SetActive(!Photo.activeSelf);
+            PhotoGraph2.SetActive(!PhotoGraph2.activeSelf);
+            Photo2.SetActive(!Photo2.activeSelf);
 
-            Time.timeScale = 1f;
-            DialougeOpened = false;
-            noMoreE = false;
-            ChoosingPanel.gameObject.SetActive(false);
+            ChoiceTime = false;
         }
     }
 

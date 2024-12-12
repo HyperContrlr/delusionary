@@ -2394,10 +2394,10 @@ MonoBehaviour:
   canInteract: 0
   Canvas: {fileID: 1666130238}
   noMoreE: 0
-  Vase: {fileID: 834919971}
-  Vas: {fileID: 834919971}
-  Vase2: {fileID: 724221607}
-  Vas2: {fileID: 1139834349}
+  VaseLL: {fileID: 1176712349}
+  VaseRL: {fileID: 834919971}
+  VaseLR: {fileID: 1139834349}
+  VaseRR: {fileID: 724221607}
   Painting: {fileID: 314011626}
   Paint: {fileID: 314011626}
   Painting2: {fileID: 1154953199}
@@ -2412,6 +2412,7 @@ MonoBehaviour:
   textSpeed: 0.1
   ChoosingPanel: {fileID: 143710967}
   DialougeOpened: 0
+  ChoiceTime: 0
 --- !u!65 &314011629
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3043,10 +3044,10 @@ MonoBehaviour:
   canInteract: 0
   Canvas: {fileID: 322570655}
   noMoreE: 0
-  Vase: {fileID: 834919971}
-  Vas: {fileID: 1176712349}
-  Vase2: {fileID: 724221607}
-  Vas2: {fileID: 1139834349}
+  VaseLL: {fileID: 1176712349}
+  VaseRL: {fileID: 834919971}
+  VaseLR: {fileID: 1139834349}
+  VaseRR: {fileID: 724221607}
   Painting: {fileID: 314011626}
   Paint: {fileID: 518236029}
   Painting2: {fileID: 1154953199}
@@ -3061,6 +3062,7 @@ MonoBehaviour:
   textSpeed: 0.1
   ChoosingPanel: {fileID: 1365900339}
   DialougeOpened: 0
+  ChoiceTime: 0
 --- !u!65 &407934714
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3329,10 +3331,10 @@ MonoBehaviour:
   canInteract: 0
   Canvas: {fileID: 1526341493}
   noMoreE: 0
-  Vase: {fileID: 834919971}
-  Vas: {fileID: 1176712349}
-  Vase2: {fileID: 724221607}
-  Vas2: {fileID: 1139834349}
+  VaseLL: {fileID: 1176712349}
+  VaseRL: {fileID: 834919971}
+  VaseLR: {fileID: 1139834349}
+  VaseRR: {fileID: 724221607}
   Painting: {fileID: 314011626}
   Paint: {fileID: 518236029}
   Painting2: {fileID: 1154953199}
@@ -3347,6 +3349,7 @@ MonoBehaviour:
   textSpeed: 0.1
   ChoosingPanel: {fileID: 1453766613}
   DialougeOpened: 0
+  ChoiceTime: 0
 --- !u!54 &518236032
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3611,10 +3614,10 @@ MonoBehaviour:
   canInteract: 0
   Canvas: {fileID: 2058132669}
   noMoreE: 0
-  Vase: {fileID: 834919971}
-  Vas: {fileID: 1176712349}
-  Vase2: {fileID: 724221607}
-  Vas2: {fileID: 1139834349}
+  VaseLL: {fileID: 1176712349}
+  VaseRL: {fileID: 834919971}
+  VaseLR: {fileID: 1139834349}
+  VaseRR: {fileID: 724221607}
   Painting: {fileID: 314011626}
   Paint: {fileID: 518236029}
   Painting2: {fileID: 1154953199}
@@ -3629,6 +3632,7 @@ MonoBehaviour:
   textSpeed: 0.1
   ChoosingPanel: {fileID: 738368389}
   DialougeOpened: 0
+  ChoiceTime: 0
 --- !u!65 &615673147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4172,7 +4176,7 @@ GameObject:
   - component: {fileID: 724221609}
   - component: {fileID: 724221610}
   m_Layer: 0
-  m_Name: Vase (2)
+  m_Name: VaseRR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4210,10 +4214,10 @@ MonoBehaviour:
   canInteract: 0
   Canvas: {fileID: 1958974060}
   noMoreE: 0
-  Vase: {fileID: 834919971}
-  Vas: {fileID: 1176712349}
-  Vase2: {fileID: 724221607}
-  Vas2: {fileID: 1139834349}
+  VaseLL: {fileID: 1176712349}
+  VaseRL: {fileID: 834919971}
+  VaseLR: {fileID: 1139834349}
+  VaseRR: {fileID: 724221607}
   Painting: {fileID: 314011626}
   Paint: {fileID: 518236029}
   Painting2: {fileID: 1154953199}
@@ -4228,6 +4232,7 @@ MonoBehaviour:
   textSpeed: 0.1
   ChoosingPanel: {fileID: 111805968}
   DialougeOpened: 0
+  ChoiceTime: 0
 --- !u!54 &724221610
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5006,7 +5011,7 @@ GameObject:
   - component: {fileID: 834919973}
   - component: {fileID: 834919972}
   m_Layer: 0
-  m_Name: vase
+  m_Name: VaseRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5043,10 +5048,10 @@ MonoBehaviour:
   canInteract: 0
   Canvas: {fileID: 1230284563}
   noMoreE: 0
-  Vase: {fileID: 834919971}
-  Vas: {fileID: 834919971}
-  Vase2: {fileID: 724221607}
-  Vas2: {fileID: 1139834349}
+  VaseLL: {fileID: 1176712349}
+  VaseRL: {fileID: 834919971}
+  VaseLR: {fileID: 1139834349}
+  VaseRR: {fileID: 724221607}
   Painting: {fileID: 314011626}
   Paint: {fileID: 314011626}
   Painting2: {fileID: 1154953199}
@@ -5061,6 +5066,7 @@ MonoBehaviour:
   textSpeed: 0.1
   ChoosingPanel: {fileID: 1367187966}
   DialougeOpened: 0
+  ChoiceTime: 0
 --- !u!65 &834919974
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6184,10 +6190,10 @@ MonoBehaviour:
   canInteract: 0
   Canvas: {fileID: 1807161283}
   noMoreE: 0
-  Vase: {fileID: 834919971}
-  Vas: {fileID: 834919971}
-  Vase2: {fileID: 724221607}
-  Vas2: {fileID: 1139834349}
+  VaseLL: {fileID: 1176712349}
+  VaseRL: {fileID: 834919971}
+  VaseLR: {fileID: 1139834349}
+  VaseRR: {fileID: 724221607}
   Painting: {fileID: 314011626}
   Paint: {fileID: 314011626}
   Painting2: {fileID: 1154953199}
@@ -6202,6 +6208,7 @@ MonoBehaviour:
   textSpeed: 0.1
   ChoosingPanel: {fileID: 1765098141}
   DialougeOpened: 0
+  ChoiceTime: 0
 --- !u!65 &1104124052
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6335,10 +6342,10 @@ MonoBehaviour:
   canInteract: 0
   Canvas: {fileID: 664078443}
   noMoreE: 0
-  Vase: {fileID: 834919971}
-  Vas: {fileID: 1176712349}
-  Vase2: {fileID: 724221607}
-  Vas2: {fileID: 1139834349}
+  VaseLL: {fileID: 1176712349}
+  VaseRL: {fileID: 834919971}
+  VaseLR: {fileID: 1139834349}
+  VaseRR: {fileID: 724221607}
   Painting: {fileID: 314011626}
   Paint: {fileID: 518236029}
   Painting2: {fileID: 1154953199}
@@ -6353,6 +6360,7 @@ MonoBehaviour:
   textSpeed: 0.1
   ChoosingPanel: {fileID: 1383030638}
   DialougeOpened: 0
+  ChoiceTime: 0
 --- !u!54 &1116138799
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6525,7 +6533,7 @@ GameObject:
   - component: {fileID: 1139834351}
   - component: {fileID: 1139834356}
   m_Layer: 0
-  m_Name: vas2
+  m_Name: VaseLR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6563,10 +6571,10 @@ MonoBehaviour:
   canInteract: 0
   Canvas: {fileID: 204213871}
   noMoreE: 0
-  Vase: {fileID: 834919971}
-  Vas: {fileID: 1176712349}
-  Vase2: {fileID: 724221607}
-  Vas2: {fileID: 1139834349}
+  VaseLL: {fileID: 1176712349}
+  VaseRL: {fileID: 834919971}
+  VaseLR: {fileID: 1139834349}
+  VaseRR: {fileID: 724221607}
   Painting: {fileID: 314011626}
   Paint: {fileID: 518236029}
   Painting2: {fileID: 1154953199}
@@ -6581,6 +6589,7 @@ MonoBehaviour:
   textSpeed: 0.1
   ChoosingPanel: {fileID: 1296472082}
   DialougeOpened: 0
+  ChoiceTime: 0
 --- !u!65 &1139834353
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6713,10 +6722,10 @@ MonoBehaviour:
   canInteract: 0
   Canvas: {fileID: 2120415756}
   noMoreE: 0
-  Vase: {fileID: 834919971}
-  Vas: {fileID: 1176712349}
-  Vase2: {fileID: 724221607}
-  Vas2: {fileID: 1139834349}
+  VaseLL: {fileID: 1176712349}
+  VaseRL: {fileID: 834919971}
+  VaseLR: {fileID: 1139834349}
+  VaseRR: {fileID: 724221607}
   Painting: {fileID: 314011626}
   Paint: {fileID: 518236029}
   Painting2: {fileID: 1154953199}
@@ -6731,6 +6740,7 @@ MonoBehaviour:
   textSpeed: 0.1
   ChoosingPanel: {fileID: 1333933962}
   DialougeOpened: 0
+  ChoiceTime: 0
 --- !u!54 &1154953202
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7251,7 +7261,7 @@ GameObject:
   - component: {fileID: 1176712351}
   - component: {fileID: 1176712352}
   m_Layer: 0
-  m_Name: vas1
+  m_Name: VaseLL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7289,10 +7299,10 @@ MonoBehaviour:
   canInteract: 0
   Canvas: {fileID: 195601992}
   noMoreE: 0
-  Vase: {fileID: 834919971}
-  Vas: {fileID: 1176712349}
-  Vase2: {fileID: 724221607}
-  Vas2: {fileID: 1139834349}
+  VaseLL: {fileID: 1176712349}
+  VaseRL: {fileID: 834919971}
+  VaseLR: {fileID: 1139834349}
+  VaseRR: {fileID: 724221607}
   Painting: {fileID: 314011626}
   Paint: {fileID: 518236029}
   Painting2: {fileID: 1154953199}
@@ -7307,6 +7317,7 @@ MonoBehaviour:
   textSpeed: 0.1
   ChoosingPanel: {fileID: 1250647135}
   DialougeOpened: 0
+  ChoiceTime: 0
 --- !u!54 &1176712352
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9741,10 +9752,10 @@ MonoBehaviour:
   canInteract: 0
   Canvas: {fileID: 1024136466}
   noMoreE: 0
-  Vase: {fileID: 834919971}
-  Vas: {fileID: 1176712349}
-  Vase2: {fileID: 724221607}
-  Vas2: {fileID: 1139834349}
+  VaseLL: {fileID: 1176712349}
+  VaseRL: {fileID: 834919971}
+  VaseLR: {fileID: 1139834349}
+  VaseRR: {fileID: 724221607}
   Painting: {fileID: 314011626}
   Paint: {fileID: 518236029}
   Painting2: {fileID: 1154953199}
@@ -9759,6 +9770,7 @@ MonoBehaviour:
   textSpeed: 0.1
   ChoosingPanel: {fileID: 1288700332}
   DialougeOpened: 0
+  ChoiceTime: 0
 --- !u!54 &1570630540
 Rigidbody:
   m_ObjectHideFlags: 0
