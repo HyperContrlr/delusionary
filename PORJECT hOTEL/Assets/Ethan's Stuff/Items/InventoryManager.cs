@@ -8,7 +8,7 @@ public class InventoryManager : MonoBehaviour
 {
     TheControls controls;
     public GameObject Inventorymenu;
-    public bool menuActive;
+    private bool menuActive;
 
     public InputActionReference inventory;
     private void Awake()
@@ -40,15 +40,9 @@ public class InventoryManager : MonoBehaviour
     {
         inventory.action.started -= OpenInv;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public void AddItem(string itemName, string description, string ID, Sprite itemSprite)
     {
-        
+        Debug.Log("da stuff " +  itemName + description + ID);
     }
 }
