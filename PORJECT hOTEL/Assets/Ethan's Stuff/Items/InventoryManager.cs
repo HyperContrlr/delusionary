@@ -9,6 +9,7 @@ public class InventoryManager : MonoBehaviour
     TheControls controls;
     public GameObject Inventorymenu;
     private bool menuActive;
+    public itemSlot[] itemSlot;
 
     public InputActionReference inventory;
     private void Awake()
@@ -43,6 +44,13 @@ public class InventoryManager : MonoBehaviour
 
     public void AddItem(string itemName, string description, string ID, Sprite itemSprite)
     {
-        Debug.Log("da stuff " +  itemName + description + ID);
+        for (int i = 0; i < itemSlot.Length; i++)
+        {
+            if(itemSlot[i].isTaken == false)
+            {
+                itemSlot[i].AddItem(itemName, description, ID, itemSprite);
+                return;
+            }
+        }
     }
 }

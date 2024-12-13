@@ -26,4 +26,5 @@ public class itemData : MonoBehaviour
         inventoryManager.AddItem(itemName, description, ID, itemSprite);
         Destroy(this.gameObject);
     }
+    //NEED AN ONCOLLISION TO DO THE ITEM PICK UP TO ADD STUFF TO THE INVENTORY!!!
 }
