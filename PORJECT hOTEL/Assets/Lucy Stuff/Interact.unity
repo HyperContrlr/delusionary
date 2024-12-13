@@ -2357,7 +2357,7 @@ GameObject:
   - component: {fileID: 314011628}
   - component: {fileID: 314011627}
   m_Layer: 0
-  m_Name: painting
+  m_Name: PaintingRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2398,14 +2398,14 @@ MonoBehaviour:
   VaseRL: {fileID: 834919971}
   VaseLR: {fileID: 1139834349}
   VaseRR: {fileID: 724221607}
-  Painting: {fileID: 314011626}
-  Paint: {fileID: 314011626}
-  Painting2: {fileID: 1154953199}
-  Paint2: {fileID: 407934711}
-  PhotoGraph: {fileID: 1104124049}
-  Photo: {fileID: 1116138796}
-  PhotoGraph2: {fileID: 1570630537}
-  Photo2: {fileID: 615673144}
+  PaintingLL: {fileID: 518236029}
+  PaintingRL: {fileID: 314011626}
+  PaintingLR: {fileID: 407934711}
+  PaintingRR: {fileID: 1154953199}
+  PhotoGraphLL: {fileID: 1116138796}
+  PhotoGraphRL: {fileID: 1104124049}
+  PhotoGraphLR: {fileID: 615673144}
+  PhotoGraphRR: {fileID: 1570630537}
   textComponent: {fileID: 1989863634}
   lines:
   - Do I wanna do the thing
@@ -3007,7 +3007,7 @@ GameObject:
   - component: {fileID: 407934713}
   - component: {fileID: 407934712}
   m_Layer: 0
-  m_Name: paint2
+  m_Name: PaintingLR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3048,14 +3048,14 @@ MonoBehaviour:
   VaseRL: {fileID: 834919971}
   VaseLR: {fileID: 1139834349}
   VaseRR: {fileID: 724221607}
-  Painting: {fileID: 314011626}
-  Paint: {fileID: 518236029}
-  Painting2: {fileID: 1154953199}
-  Paint2: {fileID: 407934711}
-  PhotoGraph: {fileID: 1104124049}
-  Photo: {fileID: 1116138796}
-  PhotoGraph2: {fileID: 1570630537}
-  Photo2: {fileID: 615673144}
+  PaintingLL: {fileID: 518236029}
+  PaintingRL: {fileID: 1104124049}
+  PaintingLR: {fileID: 615673144}
+  PaintingRR: {fileID: 1154953199}
+  PhotoGraphLL: {fileID: 1116138796}
+  PhotoGraphRL: {fileID: 1104124049}
+  PhotoGraphLR: {fileID: 615673144}
+  PhotoGraphRR: {fileID: 1570630537}
   textComponent: {fileID: 1512172968}
   lines:
   - Do I wanna do the thing
@@ -3293,7 +3293,7 @@ GameObject:
   - component: {fileID: 518236031}
   - component: {fileID: 518236032}
   m_Layer: 0
-  m_Name: paint1
+  m_Name: PaintingLL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3335,14 +3335,14 @@ MonoBehaviour:
   VaseRL: {fileID: 834919971}
   VaseLR: {fileID: 1139834349}
   VaseRR: {fileID: 724221607}
-  Painting: {fileID: 314011626}
-  Paint: {fileID: 518236029}
-  Painting2: {fileID: 1154953199}
-  Paint2: {fileID: 407934711}
-  PhotoGraph: {fileID: 1104124049}
-  Photo: {fileID: 1116138796}
-  PhotoGraph2: {fileID: 1570630537}
-  Photo2: {fileID: 615673144}
+  PaintingLL: {fileID: 518236029}
+  PaintingRL: {fileID: 314011626}
+  PaintingLR: {fileID: 407934711}
+  PaintingRR: {fileID: 1154953199}
+  PhotoGraphLL: {fileID: 1116138796}
+  PhotoGraphRL: {fileID: 1104124049}
+  PhotoGraphLR: {fileID: 615673144}
+  PhotoGraphRR: {fileID: 1570630537}
   textComponent: {fileID: 298681179}
   lines:
   - Do I wanna do the thing
@@ -3577,7 +3577,7 @@ GameObject:
   - component: {fileID: 615673146}
   - component: {fileID: 615673145}
   m_Layer: 0
-  m_Name: photo2
+  m_Name: PhotoGraphLR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3618,14 +3618,14 @@ MonoBehaviour:
   VaseRL: {fileID: 834919971}
   VaseLR: {fileID: 1139834349}
   VaseRR: {fileID: 724221607}
-  Painting: {fileID: 314011626}
-  Paint: {fileID: 518236029}
-  Painting2: {fileID: 1154953199}
-  Paint2: {fileID: 407934711}
-  PhotoGraph: {fileID: 1104124049}
-  Photo: {fileID: 1116138796}
-  PhotoGraph2: {fileID: 1570630537}
-  Photo2: {fileID: 615673144}
+  PaintingLL: {fileID: 518236029}
+  PaintingRL: {fileID: 314011626}
+  PaintingLR: {fileID: 407934711}
+  PaintingRR: {fileID: 1154953199}
+  PhotoGraphLL: {fileID: 1116138796}
+  PhotoGraphRL: {fileID: 1104124049}
+  PhotoGraphLR: {fileID: 615673144}
+  PhotoGraphRR: {fileID: 1570630537}
   textComponent: {fileID: 190488841}
   lines:
   - Do I wanna do the thing
@@ -4218,14 +4218,14 @@ MonoBehaviour:
   VaseRL: {fileID: 834919971}
   VaseLR: {fileID: 1139834349}
   VaseRR: {fileID: 724221607}
-  Painting: {fileID: 314011626}
-  Paint: {fileID: 518236029}
-  Painting2: {fileID: 1154953199}
-  Paint2: {fileID: 407934711}
-  PhotoGraph: {fileID: 1104124049}
-  Photo: {fileID: 1116138796}
-  PhotoGraph2: {fileID: 1570630537}
-  Photo2: {fileID: 615673144}
+  PaintingLL: {fileID: 518236029}
+  PaintingRL: {fileID: 314011626}
+  PaintingLR: {fileID: 407934711}
+  PaintingRR: {fileID: 1154953199}
+  PhotoGraphLL: {fileID: 1116138796}
+  PhotoGraphRL: {fileID: 1104124049}
+  PhotoGraphLR: {fileID: 615673144}
+  PhotoGraphRR: {fileID: 1570630537}
   textComponent: {fileID: 2141364157}
   lines:
   - Do I wanna do the thing
@@ -5052,14 +5052,14 @@ MonoBehaviour:
   VaseRL: {fileID: 834919971}
   VaseLR: {fileID: 1139834349}
   VaseRR: {fileID: 724221607}
-  Painting: {fileID: 314011626}
-  Paint: {fileID: 314011626}
-  Painting2: {fileID: 1154953199}
-  Paint2: {fileID: 407934711}
-  PhotoGraph: {fileID: 1104124049}
-  Photo: {fileID: 1116138796}
-  PhotoGraph2: {fileID: 1570630537}
-  Photo2: {fileID: 615673144}
+  PaintingLL: {fileID: 518236029}
+  PaintingRL: {fileID: 314011626}
+  PaintingLR: {fileID: 407934711}
+  PaintingRR: {fileID: 1154953199}
+  PhotoGraphLL: {fileID: 1116138796}
+  PhotoGraphRL: {fileID: 1104124049}
+  PhotoGraphLR: {fileID: 615673144}
+  PhotoGraphRR: {fileID: 1570630537}
   textComponent: {fileID: 123904162}
   lines:
   - Do I wanna do the thing
@@ -6153,7 +6153,7 @@ GameObject:
   - component: {fileID: 1104124051}
   - component: {fileID: 1104124050}
   m_Layer: 0
-  m_Name: photo
+  m_Name: PhotoGraphRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6194,14 +6194,14 @@ MonoBehaviour:
   VaseRL: {fileID: 834919971}
   VaseLR: {fileID: 1139834349}
   VaseRR: {fileID: 724221607}
-  Painting: {fileID: 314011626}
-  Paint: {fileID: 314011626}
-  Painting2: {fileID: 1154953199}
-  Paint2: {fileID: 407934711}
-  PhotoGraph: {fileID: 1104124049}
-  Photo: {fileID: 1116138796}
-  PhotoGraph2: {fileID: 1570630537}
-  Photo2: {fileID: 615673144}
+  PaintingLL: {fileID: 518236029}
+  PaintingRL: {fileID: 314011626}
+  PaintingLR: {fileID: 407934711}
+  PaintingRR: {fileID: 1154953199}
+  PhotoGraphLL: {fileID: 1116138796}
+  PhotoGraphRL: {fileID: 1104124049}
+  PhotoGraphLR: {fileID: 615673144}
+  PhotoGraphRR: {fileID: 1570630537}
   textComponent: {fileID: 1159299277}
   lines:
   - Do I wanna do the thing
@@ -6304,7 +6304,7 @@ GameObject:
   - component: {fileID: 1116138798}
   - component: {fileID: 1116138799}
   m_Layer: 0
-  m_Name: photo1
+  m_Name: PhotoGraphLL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6346,14 +6346,14 @@ MonoBehaviour:
   VaseRL: {fileID: 834919971}
   VaseLR: {fileID: 1139834349}
   VaseRR: {fileID: 724221607}
-  Painting: {fileID: 314011626}
-  Paint: {fileID: 518236029}
-  Painting2: {fileID: 1154953199}
-  Paint2: {fileID: 407934711}
-  PhotoGraph: {fileID: 1104124049}
-  Photo: {fileID: 1116138796}
-  PhotoGraph2: {fileID: 1570630537}
-  Photo2: {fileID: 615673144}
+  PaintingLL: {fileID: 518236029}
+  PaintingRL: {fileID: 314011626}
+  PaintingLR: {fileID: 407934711}
+  PaintingRR: {fileID: 1154953199}
+  PhotoGraphLL: {fileID: 1116138796}
+  PhotoGraphRL: {fileID: 1104124049}
+  PhotoGraphLR: {fileID: 615673144}
+  PhotoGraphRR: {fileID: 1570630537}
   textComponent: {fileID: 431855387}
   lines:
   - Do I wanna do the thing
@@ -6575,14 +6575,14 @@ MonoBehaviour:
   VaseRL: {fileID: 834919971}
   VaseLR: {fileID: 1139834349}
   VaseRR: {fileID: 724221607}
-  Painting: {fileID: 314011626}
-  Paint: {fileID: 518236029}
-  Painting2: {fileID: 1154953199}
-  Paint2: {fileID: 407934711}
-  PhotoGraph: {fileID: 1104124049}
-  Photo: {fileID: 1116138796}
-  PhotoGraph2: {fileID: 1570630537}
-  Photo2: {fileID: 615673144}
+  PaintingLL: {fileID: 518236029}
+  PaintingRL: {fileID: 314011626}
+  PaintingLR: {fileID: 407934711}
+  PaintingRR: {fileID: 1154953199}
+  PhotoGraphLL: {fileID: 1116138796}
+  PhotoGraphRL: {fileID: 1104124049}
+  PhotoGraphLR: {fileID: 615673144}
+  PhotoGraphRR: {fileID: 1570630537}
   textComponent: {fileID: 1619694388}
   lines:
   - Do I wanna do the thing
@@ -6684,7 +6684,7 @@ GameObject:
   - component: {fileID: 1154953201}
   - component: {fileID: 1154953202}
   m_Layer: 0
-  m_Name: painting (2)
+  m_Name: PaintingRR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6726,14 +6726,14 @@ MonoBehaviour:
   VaseRL: {fileID: 834919971}
   VaseLR: {fileID: 1139834349}
   VaseRR: {fileID: 724221607}
-  Painting: {fileID: 314011626}
-  Paint: {fileID: 518236029}
-  Painting2: {fileID: 1154953199}
-  Paint2: {fileID: 407934711}
-  PhotoGraph: {fileID: 1104124049}
-  Photo: {fileID: 1116138796}
-  PhotoGraph2: {fileID: 1570630537}
-  Photo2: {fileID: 615673144}
+  PaintingLL: {fileID: 518236029}
+  PaintingRL: {fileID: 314011626}
+  PaintingLR: {fileID: 407934711}
+  PaintingRR: {fileID: 1154953199}
+  PhotoGraphLL: {fileID: 1116138796}
+  PhotoGraphRL: {fileID: 1104124049}
+  PhotoGraphLR: {fileID: 615673144}
+  PhotoGraphRR: {fileID: 1570630537}
   textComponent: {fileID: 407043520}
   lines:
   - Do I wanna do the thing
@@ -7303,14 +7303,14 @@ MonoBehaviour:
   VaseRL: {fileID: 834919971}
   VaseLR: {fileID: 1139834349}
   VaseRR: {fileID: 724221607}
-  Painting: {fileID: 314011626}
-  Paint: {fileID: 518236029}
-  Painting2: {fileID: 1154953199}
-  Paint2: {fileID: 407934711}
-  PhotoGraph: {fileID: 1104124049}
-  Photo: {fileID: 1116138796}
-  PhotoGraph2: {fileID: 1570630537}
-  Photo2: {fileID: 615673144}
+  PaintingLL: {fileID: 518236029}
+  PaintingRL: {fileID: 314011626}
+  PaintingLR: {fileID: 407934711}
+  PaintingRR: {fileID: 1154953199}
+  PhotoGraphLL: {fileID: 1116138796}
+  PhotoGraphRL: {fileID: 1104124049}
+  PhotoGraphLR: {fileID: 615673144}
+  PhotoGraphRR: {fileID: 1570630537}
   textComponent: {fileID: 28717210}
   lines:
   - Do I wanna do the thing
@@ -9714,7 +9714,7 @@ GameObject:
   - component: {fileID: 1570630539}
   - component: {fileID: 1570630540}
   m_Layer: 0
-  m_Name: Photo (2)
+  m_Name: PhotoGraphRR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9756,14 +9756,14 @@ MonoBehaviour:
   VaseRL: {fileID: 834919971}
   VaseLR: {fileID: 1139834349}
   VaseRR: {fileID: 724221607}
-  Painting: {fileID: 314011626}
-  Paint: {fileID: 518236029}
-  Painting2: {fileID: 1154953199}
-  Paint2: {fileID: 407934711}
-  PhotoGraph: {fileID: 1104124049}
-  Photo: {fileID: 1116138796}
-  PhotoGraph2: {fileID: 1570630537}
-  Photo2: {fileID: 615673144}
+  PaintingLL: {fileID: 518236029}
+  PaintingRL: {fileID: 314011626}
+  PaintingLR: {fileID: 407934711}
+  PaintingRR: {fileID: 1154953199}
+  PhotoGraphLL: {fileID: 1116138796}
+  PhotoGraphRL: {fileID: 1104124049}
+  PhotoGraphLR: {fileID: 615673144}
+  PhotoGraphRR: {fileID: 1570630537}
   textComponent: {fileID: 663500940}
   lines:
   - Do I wanna do the thing
