@@ -7,18 +7,6 @@ using static Unity.Burst.Intrinsics.X86;
 
 public class Importance : Interact 
 {
-    public GameObject VaseLL;
-    public GameObject VaseRL;
-    public GameObject VaseLR;
-    public GameObject VaseRR;
-    public GameObject PaintingLL;
-    public GameObject PaintingRL;
-    public GameObject PaintingLR;
-    public GameObject PaintingRR;
-    public GameObject PhotoGraphLL;
-    public GameObject PhotoGraphRL;
-    public GameObject PhotoGraphLR;
-    public GameObject PhotoGraphRR;
 
     public TextMeshProUGUI textComponent;
     public string[] lines;
@@ -31,21 +19,6 @@ public class Importance : Interact
     public void Start()
     {
         textComponent.text = string.Empty;
-
-        VaseLL.SetActive(false);
-        VaseRL.SetActive(true);
-        VaseLR.SetActive(true);
-        VaseRR.SetActive(false);
-
-        PaintingLL.SetActive(false);
-        PaintingRL.SetActive(true);
-        PaintingLR.SetActive(false);
-        PaintingRR.SetActive(true);
-
-        PhotoGraphLL.SetActive(true);
-        PhotoGraphRL.SetActive(false);
-        PhotoGraphLR.SetActive(true);
-        PhotoGraphRR.SetActive(false);
     }
 
     public override void StartInteract()
@@ -108,10 +81,11 @@ public class Importance : Interact
     public void VaseChange()
     {
         {
-            VaseLL.SetActive(!VaseLL.activeSelf);
-            VaseRL.SetActive(!VaseRL.activeSelf);
-            VaseLR.SetActive(!VaseLR.activeSelf);
-            VaseRR.SetActive(!VaseRR.activeSelf);
+            ObjectSetup.VaseLL.SetActive(!ObjectSetup.VaseLL.activeSelf);
+            ObjectSetup.VaseRL.SetActive(!ObjectSetup.VaseRL.activeSelf);
+            ObjectSetup.VaseLR.SetActive(!ObjectSetup.VaseLR.activeSelf);
+            ObjectSetup.VaseRR.SetActive(!ObjectSetup.VaseRR.activeSelf);
+
             ChoiceTime = false;
             choiceTimeOver();
         }
@@ -122,12 +96,13 @@ public class Importance : Interact
         {
             //Vase.SetActive(false);
             //Vas.SetActive(true);
-            PaintingLL.SetActive(!PaintingLL.activeSelf);
-            PaintingRL.SetActive(!PaintingRL.activeSelf);
-            PaintingLR.SetActive(!PaintingLR.activeSelf);
-            PaintingRR.SetActive(!PaintingRR.activeSelf);
+            ObjectSetup.PaintingLL.SetActive(!ObjectSetup.PaintingLL.activeSelf);
+            ObjectSetup.PaintingRL.SetActive(!ObjectSetup.PaintingRL.activeSelf);
+            ObjectSetup.PaintingLR.SetActive(!ObjectSetup.PaintingLR.activeSelf);
+            ObjectSetup.PaintingRR.SetActive(!ObjectSetup.PaintingRR.activeSelf);
 
             ChoiceTime = false;
+            choiceTimeOver();
         }
     }
 
@@ -138,12 +113,13 @@ public class Importance : Interact
             //Painting2.SetActive(false);
             //Paint.SetActive(true);
             //Paint2.SetActive(true);
-            PhotoGraphLL.SetActive(!PhotoGraphLL.activeSelf);
-            PhotoGraphRL.SetActive(!PhotoGraphRL.activeSelf);
-            PhotoGraphLR.SetActive(!PhotoGraphLR.activeSelf);
-            PhotoGraphRR.SetActive(!PhotoGraphRR.activeSelf);
+            ObjectSetup.PhotoGraphLL.SetActive(!ObjectSetup.PhotoGraphLL.activeSelf);
+            ObjectSetup.PhotoGraphRL.SetActive(!ObjectSetup.PhotoGraphRL.activeSelf);
+            ObjectSetup.PhotoGraphLR.SetActive(!ObjectSetup.PhotoGraphLR.activeSelf);
+            ObjectSetup.PhotoGraphRR.SetActive(!ObjectSetup.PhotoGraphRR.activeSelf);
 
             ChoiceTime = false;
+            choiceTimeOver();
         }
     }
 
