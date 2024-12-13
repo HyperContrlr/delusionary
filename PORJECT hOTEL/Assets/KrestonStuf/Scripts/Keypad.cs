@@ -7,10 +7,10 @@ public class Keypad : MonoBehaviour
     public bool clickable = true;
     public bool complete = false;
     public bool click1 = false;
-    public char key1 = 'x';
-    public char key2 = 'x';
+    public char key1 = ' ';
+    public char key2 = ' ';
     public string VMText = string.Empty;
-    public int delayTime = 2;
+    public int delayTime = 5;
     public TMPro.TMP_Text digits;
 
 
@@ -23,9 +23,10 @@ public class Keypad : MonoBehaviour
         }
         else
         {
-            VMText = string.Empty;
+            
             key1 = ' ';
             key2 = ' ';
+            digits.SetText(char.ToString(key1) + char.ToString(key2).ToString());
             click1 = false;
             clickable = true;
         }
@@ -40,13 +41,13 @@ public class Keypad : MonoBehaviour
                 key1 = '☈';
                 clickable = true;
 
-                digits.SetText((key1 + key2).ToString());
+                digits.SetText(char.ToString(key1) + char.ToString(key2).ToString());
             }
             else
             {
                 key2 = '☈';
-                StartCoroutine(TimeBeforeReset()); 
-                digits.SetText((key1 + key2).ToString());
+                StartCoroutine(TimeBeforeReset());
+                digits.SetText(char.ToString(key1) + char.ToString(key2).ToString());
             }
         }
     }
@@ -59,13 +60,13 @@ public class Keypad : MonoBehaviour
                 click1 = true;
                 key1 = 'Ω';
                 clickable = true;
-                digits.SetText((key1 + key2).ToString());
+                digits.SetText(char.ToString(key1) + char.ToString(key2).ToString());
             }
             else
             {
                 key2 = 'Ω';
                 StartCoroutine(TimeBeforeReset());
-                digits.SetText((key1 + key2).ToString());
+                digits.SetText(char.ToString(key1) + char.ToString(key2).ToString());
             }
         }
     }
@@ -78,13 +79,13 @@ public class Keypad : MonoBehaviour
                 click1 = true;
                 key1 = 'Ξ';
                 clickable = true;
-                digits.SetText((key1 + key2).ToString());
+                digits.SetText(char.ToString(key1) + char.ToString(key2).ToString());
             }
             else
             {
                 key2 = 'Ξ';
                 StartCoroutine(TimeBeforeReset());
-                digits.SetText((key1 + key2).ToString());
+                digits.SetText(char.ToString(key1) + char.ToString(key2).ToString());
             }
         }
     }
@@ -97,13 +98,13 @@ public class Keypad : MonoBehaviour
                 click1 = true;
                 key1 = 'ϟ';
                 clickable = true;
-                digits.SetText((key1 + key2).ToString());
+                digits.SetText(char.ToString(key1) + char.ToString(key2).ToString());
             }
             else
             {
                 key2 = 'ϟ';
                 StartCoroutine(TimeBeforeReset());
-                digits.SetText((key1 + key2).ToString());
+                digits.SetText(char.ToString(key1) + char.ToString(key2).ToString());
             }
         }
     }
@@ -116,13 +117,13 @@ public class Keypad : MonoBehaviour
                 click1 = true;
                 key1 = 'Ψ';
                 clickable = true;
-                digits.SetText((key1 + key2).ToString());
+                digits.SetText(char.ToString(key1) + char.ToString(key2).ToString());
             }
             else
             {
                 key2 = 'Ψ';
                 StartCoroutine(TimeBeforeReset());
-                digits.SetText((key1 + key2).ToString());
+                digits.SetText(char.ToString(key1) + char.ToString(key2).ToString());
             }
         }
     }
@@ -135,13 +136,13 @@ public class Keypad : MonoBehaviour
                 click1 = true;
                 key1 = '1';
                 clickable = true;
-                digits.SetText((key1 + key2).ToString());
+                digits.SetText(char.ToString(key1) + char.ToString(key2).ToString());
             }
             else
             {
                 key2 = '1';
                 StartCoroutine(TimeBeforeReset());
-                digits.SetText((key1 + key2).ToString());
+                digits.SetText(char.ToString(key1) + char.ToString(key2).ToString());
             }
         }
     }
@@ -154,13 +155,13 @@ public class Keypad : MonoBehaviour
                 click1 = true;
                 key1 = '2';
                 clickable = true;
-                digits.SetText((key1 + key2).ToString());
+                digits.SetText(char.ToString(key1) + char.ToString(key2).ToString());
             }
             else
             {
                 key2 = '2';
                 StartCoroutine(TimeBeforeReset());
-                digits.SetText((key1 + key2).ToString());
+                digits.SetText(char.ToString(key1) + char.ToString(key2).ToString());
             }
         }
     }
@@ -173,13 +174,13 @@ public class Keypad : MonoBehaviour
                 click1 = true;
                 key1 = '3';
                 clickable = true;
-                digits.SetText((key1 + key2).ToString());
+                digits.SetText(char.ToString(key1) + char.ToString(key2).ToString());
             }
             else
             {
                 key2 = '3';
                 StartCoroutine(TimeBeforeReset());
-                digits.SetText((key1 + key2).ToString());
+                digits.SetText(char.ToString(key1) + char.ToString(key2).ToString());
             }
         }
     }
@@ -192,13 +193,13 @@ public class Keypad : MonoBehaviour
                 click1 = true;
                 key1 = '4';
                 clickable = true;
-                digits.SetText((key1 + key2).ToString());
+                digits.SetText(char.ToString(key1) + char.ToString(key2).ToString());
             }
             else
             {
                 key2 = '4';
                 StartCoroutine(TimeBeforeReset());
-                digits.SetText((key1 + key2).ToString());
+                digits.SetText(char.ToString(key1) + char.ToString(key2).ToString());
             }
         }
     }
@@ -211,20 +212,20 @@ public class Keypad : MonoBehaviour
                 click1 = true;
                 key1 = '5';
                 clickable = true;
-                digits.SetText((key1 + key2).ToString());
+                digits.SetText(char.ToString(key1) + char.ToString(key2).ToString());
             }
             else
             {
                 key2 = '5';
                 StartCoroutine(TimeBeforeReset());
-                digits.SetText((key1 + key2).ToString());
+                digits.SetText(char.ToString(key1) + char.ToString(key2).ToString());
             }
         }
     }
     IEnumerator TimeBeforeReset()
     {
         clickable = false;
-        VMText = char.ToString(key1) + char.ToString(key2);
+        //VMText = char.ToString(key1) + char.ToString(key2);
         print(Time.time);
         yield return new WaitForSeconds(delayTime);
         print(Time.time);
