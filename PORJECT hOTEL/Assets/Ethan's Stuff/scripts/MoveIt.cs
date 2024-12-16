@@ -13,6 +13,8 @@ public class MoveIt : MonoBehaviour
     public Rigidbody rb;
     private Vector3 moveInput;
     public KeyCode KeyboardSprint;
+    public GameObject item;
+    public bool canPickUp = false;
 
     private float activeMoveSpeed;
     public speedometer speeeeed;
@@ -38,7 +40,11 @@ public class MoveIt : MonoBehaviour
     }
     private void Interact_started(InputAction.CallbackContext obj)
     {
-        Debug.Log("Interact Pressed");
+        if (canPickUp)
+        {
+            item.GetComponent<itemData>().ItemPickUp();
+            Debug.Log("Interact Pressed");
+        }
     }
     private void Sprint_started(InputAction.CallbackContext obj)
     {
@@ -62,7 +68,19 @@ public class MoveIt : MonoBehaviour
     {
         activeMoveSpeed = moveSpeed;
     }
-
+    public void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("item"))
+        {
+            Debug.Log(other.gameObject.name);
+            canPickUp = true;
+            item = other.gameObject;
+        }
+    }
+    public void OnCollisionExit(Collision other)
+    {
+        canPickUp = false;
+    }
     // Update is called once per frame
     void Update()
     {

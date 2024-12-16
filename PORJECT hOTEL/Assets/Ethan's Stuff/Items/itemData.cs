@@ -18,10 +18,11 @@ public class itemData : MonoBehaviour
     void Start()
     {
         inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
+        itemSprite = gameObject.GetComponentInChildren<Sprite>();
     }
 
     //Will be called whenever the item would get picked up
-    void ItemPickUp()
+    public void ItemPickUp()
     {
         inventoryManager.AddItem(itemName, description, ID, itemSprite);
         Destroy(this.gameObject);
