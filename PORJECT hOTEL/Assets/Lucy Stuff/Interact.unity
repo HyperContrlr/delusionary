@@ -2401,6 +2401,7 @@ MonoBehaviour:
   ChoosingPanel: {fileID: 143710967}
   DialougeOpened: 0
   ChoiceTime: 0
+  PuzzlePeice: {fileID: 381583420}
 --- !u!65 &314011629
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2845,6 +2846,141 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &381583420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 381583426}
+  - component: {fileID: 381583425}
+  - component: {fileID: 381583424}
+  - component: {fileID: 381583423}
+  - component: {fileID: 381583422}
+  - component: {fileID: 381583421}
+  m_Layer: 0
+  m_Name: Text cube 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!54 &381583421
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381583420}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &381583422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381583420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b6c59e0f56aa8446951a1835d32ddad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canInteract: 0
+  Canvas: {fileID: 1691810263}
+  noMoreE: 0
+  textComponent: {fileID: 1169801876}
+  lines:
+  - Its a Cube
+  - Yep 4 sides all right
+  textSpeed: 0.1
+--- !u!65 &381583423
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381583420}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &381583424
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381583420}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 257
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &381583425
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381583420}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &381583426
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381583420}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.94, y: 1.3049622, z: 2.85}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &407043518
 GameObject:
   m_ObjectHideFlags: 0
@@ -3039,6 +3175,7 @@ MonoBehaviour:
   ChoosingPanel: {fileID: 1365900339}
   DialougeOpened: 0
   ChoiceTime: 0
+  PuzzlePeice: {fileID: 381583420}
 --- !u!65 &407934714
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3314,6 +3451,7 @@ MonoBehaviour:
   ChoosingPanel: {fileID: 1453766613}
   DialougeOpened: 0
   ChoiceTime: 0
+  PuzzlePeice: {fileID: 381583420}
 --- !u!54 &518236032
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3585,6 +3723,7 @@ MonoBehaviour:
   ChoosingPanel: {fileID: 738368389}
   DialougeOpened: 0
   ChoiceTime: 0
+  PuzzlePeice: {fileID: 381583420}
 --- !u!65 &615673147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4173,6 +4312,7 @@ MonoBehaviour:
   ChoosingPanel: {fileID: 111805968}
   DialougeOpened: 0
   ChoiceTime: 0
+  PuzzlePeice: {fileID: 381583420}
 --- !u!54 &724221610
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4995,6 +5135,7 @@ MonoBehaviour:
   ChoosingPanel: {fileID: 1367187966}
   DialougeOpened: 0
   ChoiceTime: 0
+  PuzzlePeice: {fileID: 381583420}
 --- !u!65 &834919974
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6138,6 +6279,7 @@ MonoBehaviour:
   ChoosingPanel: {fileID: 1765098141}
   DialougeOpened: 0
   ChoiceTime: 0
+  PuzzlePeice: {fileID: 381583420}
 --- !u!65 &1104124052
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6278,6 +6420,7 @@ MonoBehaviour:
   ChoosingPanel: {fileID: 1383030638}
   DialougeOpened: 0
   ChoiceTime: 0
+  PuzzlePeice: {fileID: 381583420}
 --- !u!54 &1116138799
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6495,6 +6638,7 @@ MonoBehaviour:
   ChoosingPanel: {fileID: 1296472082}
   DialougeOpened: 0
   ChoiceTime: 0
+  PuzzlePeice: {fileID: 381583420}
 --- !u!65 &1139834353
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6634,6 +6778,7 @@ MonoBehaviour:
   ChoosingPanel: {fileID: 1333933962}
   DialougeOpened: 0
   ChoiceTime: 0
+  PuzzlePeice: {fileID: 381583420}
 --- !u!54 &1154953202
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7199,6 +7344,7 @@ MonoBehaviour:
   ChoosingPanel: {fileID: 1250647135}
   DialougeOpened: 0
   ChoiceTime: 0
+  PuzzlePeice: {fileID: 381583420}
 --- !u!54 &1176712352
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9640,6 +9786,7 @@ MonoBehaviour:
   ChoosingPanel: {fileID: 1288700332}
   DialougeOpened: 0
   ChoiceTime: 0
+  PuzzlePeice: {fileID: 381583420}
 --- !u!54 &1570630540
 Rigidbody:
   m_ObjectHideFlags: 0

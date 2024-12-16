@@ -15,11 +15,18 @@ public class Importance : Interact
     public GameObject ChoosingPanel;
     public bool DialougeOpened;
     public bool ChoiceTime;
+    public GameObject PuzzlePeice;
 
     public void Start()
     {
         textComponent.text = string.Empty;
+        Win();
     }
+    //public override void Update()
+    //{
+    //    base.Update();
+
+    //}
 
     public override void StartInteract()
     {
@@ -88,14 +95,15 @@ public class Importance : Interact
 
             ChoiceTime = false;
             choiceTimeOver();
+            canInteract = false;
         }
     }
 
     public void PaintingChange()
     {
         {
-            //Vase.SetActive(false);
-            //Vas.SetActive(true);
+            ObjectSetup.VaseLL.SetActive(true);
+            ObjectSetup.VaseRL.SetActive(false);
             ObjectSetup.PaintingLL.SetActive(!ObjectSetup.PaintingLL.activeSelf);
             ObjectSetup.PaintingRL.SetActive(!ObjectSetup.PaintingRL.activeSelf);
             ObjectSetup.PaintingLR.SetActive(!ObjectSetup.PaintingLR.activeSelf);
@@ -103,16 +111,17 @@ public class Importance : Interact
 
             ChoiceTime = false;
             choiceTimeOver();
+            canInteract = false;
         }
     }
 
     public void PhotoGraphChange()
     {
         {
-            //Painting.SetActive(false);
-            //Painting2.SetActive(false);
-            //Paint.SetActive(true);
-            //Paint2.SetActive(true);
+            ObjectSetup.PaintingLL.SetActive(false);
+            ObjectSetup.PaintingRL.SetActive(true);
+            ObjectSetup.PaintingLR.SetActive(true);
+            ObjectSetup.PaintingRR.SetActive(false);
             ObjectSetup.PhotoGraphLL.SetActive(!ObjectSetup.PhotoGraphLL.activeSelf);
             ObjectSetup.PhotoGraphRL.SetActive(!ObjectSetup.PhotoGraphRL.activeSelf);
             ObjectSetup.PhotoGraphLR.SetActive(!ObjectSetup.PhotoGraphLR.activeSelf);
@@ -120,16 +129,24 @@ public class Importance : Interact
 
             ChoiceTime = false;
             choiceTimeOver();
+            canInteract = false;
         }
     }
 
-    //public void Win()
-    //{
-    //    if (Vase.SetActive(true) && Vas.SetActive(true) && Painting.SetActive(false) && Paint2.SetActive(false) && PhotoGraph(true) && Photo.SetActive(true) ) 
-    //    {
+    public void Win()
+    {
+        if (ObjectSetup.VaseRL.activeSelf == true && ObjectSetup.VaseRR.activeSelf == true && ObjectSetup.PaintingLL.activeSelf == true && ObjectSetup.PaintingRR.activeSelf == true && ObjectSetup.PhotoGraphLL.activeSelf == true && ObjectSetup.PhotoGraphLR.activeSelf == true)
+        {
+            Debug.Log("puzzle finished");
+            PuzzlePeice.SetActive(true);
+        }
+    }
 
-    //    }
-    //}
+    public void Won()
+    {
+        PuzzlePeice.SetActive(true);
+    }
+
         public void NoMoreE()
     {
         if (noMoreE == true)

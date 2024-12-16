@@ -50,8 +50,9 @@ public abstract class Interact : MonoBehaviour
         Time.timeScale = 1f;
     }
     
-    public void Update()
+    public virtual void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.E) && canInteract)
         {
             if (Canvas != null && noMoreE == false)
