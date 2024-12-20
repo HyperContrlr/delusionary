@@ -17,7 +17,7 @@ public class Dialogue : Interact
     bool DialougeOpened;
 
     TheControls controls;
-    public InputActionReference interact_action;
+    private InputActionReference interact_action;
     private void Awake()
     {
         //For now, assigns the controls
