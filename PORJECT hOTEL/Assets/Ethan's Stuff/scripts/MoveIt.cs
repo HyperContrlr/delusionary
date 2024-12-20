@@ -19,7 +19,7 @@ public class MoveIt : MonoBehaviour
     private float activeMoveSpeed;
     public speedometer speeeeed;
     //public Animator animator;
-    public InputActionReference Sprint, Interact, Pause, InventoryL, InventoryR;
+    public InputActionReference Sprint, interact_action, Pause, InventoryL, InventoryR;
 
     private void Awake()
     {
@@ -36,7 +36,7 @@ public class MoveIt : MonoBehaviour
         Sprint.action.canceled -= Sprint_started;
 
         //Other one button press stuff
-        Interact.action.started += Interact_started;
+        interact_action.action.started += Interact_started;
     }
     private void Interact_started(InputAction.CallbackContext obj)
     {
@@ -61,7 +61,7 @@ public class MoveIt : MonoBehaviour
     {
         Sprint.action.started -= Sprint_started;
         Sprint.action.canceled -= Sprint_cancelled;
-        Interact.action.started -= Interact_started;
+        interact_action.action.started -= Interact_started;
     }
     // Start is called before the first frame update
     void Start()

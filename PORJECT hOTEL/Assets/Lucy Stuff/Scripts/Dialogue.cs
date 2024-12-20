@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.iOS;
 
 public class Dialogue : Interact
 {
@@ -14,7 +16,25 @@ public class Dialogue : Interact
     
     bool DialougeOpened;
 
+    TheControls controls;
+    public InputActionReference interact_action;
+    private void Awake()
+    {
+        //For now, assigns the controls
+        controls = new TheControls();
+    }
+    private void OnEnable()
+    {
+        interact_action.action.started += Interact_started;
+    }
+    private void OnDisable()
+    {
+        interact_action.action.started -= Interact_started;
+    }
+    private void Interact_started(InputAction.CallbackContext obj)
+    {
 
+    }
     public void Start()
     {
         textComponent.text = string.Empty;
