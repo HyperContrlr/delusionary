@@ -13,7 +13,7 @@ public abstract class Interact : MonoBehaviour
     [FormerlySerializedAs("Text")] public GameObject Canvas;
     public bool noMoreE;
 
-    TheControls controls;
+    /*TheControls controls;
     private InputActionReference interact_action;
     private void Awake()
     {
@@ -28,9 +28,9 @@ public abstract class Interact : MonoBehaviour
     {
         interact_action.action.started -= Interact_started;
     }
-    public virtual void Interact_started(InputAction.CallbackContext obj)
+    public void Interact_started(InputAction.CallbackContext obj)
     {
-        if (Canvas != null && noMoreE == false)
+        if (Canvas != null && noMoreE == false && canInteract)
         {
                 noMoreE = true;
                 Canvas.SetActive(true);
@@ -42,11 +42,11 @@ public abstract class Interact : MonoBehaviour
         {
             Canvas.gameObject.SetActive(false);
         }
-        else if (Input.GetMouseButtonDown(0) && noMoreE)
+        else if (noMoreE)
         {
             ContinueInteract();
         }
-    }
+    }*/
     public void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -85,9 +85,26 @@ public abstract class Interact : MonoBehaviour
         Time.timeScale = 1f;
     }
     
-    /*public virtual void Update()
+    public virtual void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E) && canInteract)
+        {
+            if (Canvas != null && noMoreE == false)
+            {
+                noMoreE = true;
+                Canvas.SetActive(true);
+                Time.timeScale = 0f;
 
-        
-    }*/
+                StartInteract();
+            }
+        }
+        if (!canInteract)
+        {
+            Canvas.gameObject.SetActive(false);
+        }
+        else if (Input.GetMouseButtonDown(0) && noMoreE)
+        {
+            ContinueInteract();
+        }
+    }
 }
