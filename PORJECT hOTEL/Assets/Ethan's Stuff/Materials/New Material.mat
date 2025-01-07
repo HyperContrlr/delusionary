@@ -24,7 +24,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: New Material
-  m_Shader: {fileID: 4800000, guid: c4edd00ff2db5b24391a4fcb1762e459, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: c6dac629e1a165a439fe159496af6493,
+    type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -39,7 +40,9 @@ Material:
     MotionVector: User
   disabledShaderPasses:
   - MOTIONVECTORS
-  - DistortionVectors
+  - TransparentDepthPrepass
+  - TransparentDepthPostpass
+  - TransparentBackface
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -93,11 +96,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Main_Texture:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 0201488199f737740a2d8bf1301e5fae, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Main_Texture_1:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 0201488199f737740a2d8bf1301e5fae, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -248,11 +251,13 @@ Material:
     - _PPDMinSamples: 5
     - _PPDPrimitiveLength: 1
     - _PPDPrimitiveWidth: 1
+    - _Range: -0.41
     - _RayTracing: 0
     - _ReceivesSSR: 1
     - _ReceivesSSRTransparent: 0
     - _RefractionModel: 0
     - _RenderQueueType: 1
+    - _Scroll: 0.9
     - _Shades: 17.26
     - _Smoothness: 0.5
     - _SmoothnessRemapMax: 1
@@ -307,6 +312,8 @@ Material:
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
+    - _Shadow_Color_1: {r: 0, g: 0, b: 0, a: 0}
+    - _Shadow_Color_2: {r: 0.33018863, g: 0.33018863, b: 0.33018863, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
