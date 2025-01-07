@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Main Menu.unity
     guid: 7bbe8834c15da5f479de49c6e174be3e
   - enabled: 1
-    path: Assets/MaterScene.unity
+    path: Assets/MasterScene.unity
     guid: 5356a5d78a6b5834b98707a1bd3ee47a
   - enabled: 1
     path: Assets/Ethan's Stuff/scenes/OutdoorsScene.unity
