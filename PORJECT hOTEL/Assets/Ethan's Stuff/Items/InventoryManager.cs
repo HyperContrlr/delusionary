@@ -33,7 +33,7 @@ public class InventoryManager : MonoBehaviour
         doll2 = false;
         doll3 = false;
         keycard1 = false; 
-         keycard2 = false;
+        keycard2 = false;
     }
     private void OnEnable()
     {

@@ -2994,13 +2994,13 @@
     "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
     "m_ObjectId": "a57266b24f644fa795d8095c0f2b163a",
     "m_Title": "Link & Timestamp",
-    "m_Content": "https://youtu.be/t0HIpTopbaA?si=fw4wxg9Q3N9KdMer\n\n2:46\n\n",
+    "m_Content": "https://youtu.be/t0HIpTopbaA?si=fw4wxg9Q3N9KdMer",
     "m_TextSize": 0,
     "m_Theme": 0,
     "m_Position": {
         "serializedVersion": "2",
-        "x": -561.0,
-        "y": -123.0,
+        "x": -475.0,
+        "y": -173.0,
         "width": 200.0,
         "height": 160.0
     },
