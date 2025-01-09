@@ -1,6 +1,6 @@
 # Blender 4.3.2
 # www.blender.org
-mtllib Lamp.mtl
+mtllib RecordPlayer.mtl
 o Door_Frame
 v -4.328313 0.005773 10.019110
 v -4.328313 0.005773 7.630657
