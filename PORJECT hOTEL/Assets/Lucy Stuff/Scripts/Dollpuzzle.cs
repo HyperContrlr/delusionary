@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class DollPuzzle : MonoBehaviour
+public class Dollpuzzle : MonoBehaviour
 {
     public Image Light1;
     public Image Light2;
@@ -15,6 +15,6 @@ public class DollPuzzle : MonoBehaviour
 
     public void button1()
     {
-        Light1.enabled = true;
+        Light1.enabled = !Light1.enabled;
     }
 }
