@@ -144,11 +144,6 @@ public class Importance : Interact
         }
     }
 
-    public void Won()
-    {
-    //    PuzzlePeice.SetActive(true);
-        Jumpscare.SetActive(true);
-    }
 
         public void NoMoreE()
     {
@@ -184,4 +179,10 @@ public class Importance : Interact
             CloseInteract();
         }
     }
+
 }
+    //public void Won()
+    //{
+    ////    PuzzlePeice.SetActive(true);
+    //    Jumpscare.SetActive(true);
+    //}
