@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class openDaDoor : MonoBehaviour
@@ -16,9 +17,13 @@ public class openDaDoor : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
+        this.transform.position = Vector3.zero;
         //checks if the player can open it
         if (Input.GetKeyDown(KeyCode.E) && canOpen)
         {
+            //Play the open door animation
+            animator.SetTrigger("open");
+            //start coroutine
             StartCoroutine(DoorAnimationTimer());
         }
     }
@@ -37,8 +42,6 @@ public class openDaDoor : MonoBehaviour
     private IEnumerator DoorAnimationTimer()
     {
         canOpen = false;
-        //Play the open door animation
-        animator.SetTrigger("open");
         //disable hitbox
         this.GetComponent<BoxCollider>().enabled = false;
         //start a timer
