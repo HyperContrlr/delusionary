@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.iOS;
+using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -10,6 +11,13 @@ public class InventoryManager : MonoBehaviour
     public GameObject Inventorymenu;
     private bool menuActive;
     public itemSlot[] itemSlot;
+    public Sprite doorshard1;
+    public Sprite doorshard2;
+    public Sprite doorshard3;
+
+    public GameObject shardThing1;
+    public GameObject shardThing2;
+    public GameObject shardThing3;
 
     public InputActionReference inventory;
 
@@ -21,6 +29,10 @@ public class InventoryManager : MonoBehaviour
     public bool doll3;
     public bool keycard1;
     public bool keycard2;
+
+    public bool door1;
+    public bool door2;
+    public bool door3;
 
     private void Awake()
     {
@@ -38,6 +50,21 @@ public class InventoryManager : MonoBehaviour
     private void OnEnable()
     {
         inventory.action.started += OpenInv;
+    }
+    public void Update()
+    {
+        if (door1)
+        {
+            shardThing1.gameObject.GetComponentInChildren<Image>().sprite = doorshard1;
+        }
+        if (door2)
+        {
+            shardThing2.gameObject.GetComponentInChildren<Image>().sprite = doorshard2;
+        }
+        if (door3)
+        {
+            shardThing3.gameObject.GetComponentInChildren<Image>().sprite = doorshard3;
+        }
     }
     private void OpenInv(InputAction.CallbackContext obj)
     {
