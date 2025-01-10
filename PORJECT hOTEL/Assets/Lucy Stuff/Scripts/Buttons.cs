@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
-    public void Play()
+    public IEnumerator Play()
     {
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene("MasterScene");
     }
 
