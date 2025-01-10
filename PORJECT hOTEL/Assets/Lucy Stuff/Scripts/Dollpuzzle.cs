@@ -17,4 +17,24 @@ public class Dollpuzzle : MonoBehaviour
     {
         Light1.enabled = !Light1.enabled;
     }
+
+    public void button2()
+    {
+        Light2.enabled = !Light2.enabled;
+    }
+
+    public void button3()
+    {
+        Light3.enabled = !Light3.enabled;
+    }
+
+    public void button4()
+    {
+        Light4.enabled = !Light4.enabled;
+    }
+
+    public void button5()
+    {
+        Light5.enabled = !Light5.enabled;
+    }
 }

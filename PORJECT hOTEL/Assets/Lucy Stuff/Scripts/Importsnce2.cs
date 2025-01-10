@@ -54,10 +54,10 @@ public class Importsnce2 : Interact
         Time.timeScale = 1f;
         noMoreE = false;
     }
-   
+
     //public void Win()
     //{
-    //    if (ObjectSetup.VaseRL.activeSelf == true && ObjectSetup.VaseRR.activeSelf == true && ObjectSetup.PaintingLL.activeSelf == true && ObjectSetup.PaintingRR.activeSelf == true && ObjectSetup.PhotoGraphLL.activeSelf == true && ObjectSetup.PhotoGraphLR.activeSelf == true)
+    //    if (Dollpuzzle.Light1.enabled == true && Dollpuzzle.Light3.enabled == true && Dollpuzzle.Light5.enabled == true)
     //    {
     //        Debug.Log("puzzle finished");
     //        //     PuzzlePeice.SetActive(true);
