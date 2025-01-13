@@ -6060,6 +6060,7 @@ MonoBehaviour:
   canInteract: 0
   Canvas: {fileID: 994818766}
   noMoreE: 0
+  DP: {fileID: 994818771}
   DialougeOpened: 0
   PuzzlePeice: {fileID: 0}
 --- !u!1 &872934024
@@ -6433,7 +6434,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 892736714}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 994818771}
+        m_TargetAssemblyTypeName: Dollpuzzle, Assembly-CSharp
+        m_MethodName: button3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &892736714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6689,7 +6702,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 919671772}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 994818771}
+        m_TargetAssemblyTypeName: Dollpuzzle, Assembly-CSharp
+        m_MethodName: button2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &919671772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6825,7 +6850,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &994818767
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8796,7 +8821,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1233339679}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 994818771}
+        m_TargetAssemblyTypeName: Dollpuzzle, Assembly-CSharp
+        m_MethodName: button4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1233339679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9254,7 +9291,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1313167895}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 994818771}
+        m_TargetAssemblyTypeName: Dollpuzzle, Assembly-CSharp
+        m_MethodName: button5
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1313167895
 MonoBehaviour:
   m_ObjectHideFlags: 0
