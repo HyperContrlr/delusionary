@@ -6,9 +6,12 @@ using UnityEngine;
 
 public class openDaDoor : MonoBehaviour
 {
+    public InventoryManager inventoryManager;
     private Animator animator;
     public bool canOpen;
     public float animDuration;
+    public bool isLocked;
+    public string unlockID;
     private void Start()
     {
         canOpen = false;
@@ -19,12 +22,62 @@ public class openDaDoor : MonoBehaviour
     {
         this.transform.position = Vector3.zero;
         //checks if the player can open it
-        if (Input.GetKeyDown(KeyCode.E) && canOpen)
+        if (!isLocked)
         {
-            //Play the open door animation
-            animator.SetTrigger("open");
-            //start coroutine
-            StartCoroutine(DoorAnimationTimer());
+            if (Input.GetKeyDown(KeyCode.E) && canOpen)
+            {
+                //Play the open door animation
+                animator.SetTrigger("open");
+                //start coroutine
+                StartCoroutine(DoorAnimationTimer());
+            }
+        }
+        else if (isLocked)
+        {
+            if (unlockID == "1" && inventoryManager.puzzle1)
+            {
+                animator.SetTrigger("open");
+                StartCoroutine(DoorAnimationTimer());
+            }
+            else if (unlockID == "2" && inventoryManager.puzzle2)
+            {
+                animator.SetTrigger("open");
+                StartCoroutine(DoorAnimationTimer());
+            }
+            else if (unlockID == "3" && inventoryManager.puzzle3)
+            {
+                animator.SetTrigger("open");
+                StartCoroutine(DoorAnimationTimer());
+            }
+            else if (unlockID == "4" && inventoryManager.doll1)
+            {
+                animator.SetTrigger("open");
+                StartCoroutine(DoorAnimationTimer());
+            }
+            else if (unlockID == "5" && inventoryManager.doll2)
+            {
+                animator.SetTrigger("open");
+                StartCoroutine(DoorAnimationTimer());
+            }
+            else if (unlockID == "6" && inventoryManager.doll3)
+            {
+                animator.SetTrigger("open");
+                StartCoroutine(DoorAnimationTimer());
+            }
+            else if (unlockID == "7" && inventoryManager.keycard1)
+            {
+                animator.SetTrigger("open");
+                StartCoroutine(DoorAnimationTimer());
+            }
+            else if (unlockID == "8" && inventoryManager.keycard2)
+            {
+                animator.SetTrigger("open");
+                StartCoroutine(DoorAnimationTimer());
+            }
+            else
+            {
+                return;
+            }
         }
     }
     private void OnCollisionEnter(Collision other)
