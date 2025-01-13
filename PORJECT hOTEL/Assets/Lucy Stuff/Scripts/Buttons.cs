@@ -5,13 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
+    public Animator Animation; 
+
     public void playbutton()
     {
         StartCoroutine(Play());
     }
     public IEnumerator Play()
     {
-        yield return new WaitForSeconds(2f);
+        Animation.SetTrigger("FadeTobLAck");
+        yield return new WaitForSeconds(2F);
         SceneManager.LoadScene("MasterScene");
     }
 

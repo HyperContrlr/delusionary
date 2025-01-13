@@ -7,7 +7,7 @@ using static Unity.Burst.Intrinsics.X86;
 
 public class Importsnce2 : Interact
 {
-
+    public Dollpuzzle DP;
     public bool DialougeOpened;
     public GameObject PuzzlePeice;
 
@@ -55,14 +55,14 @@ public class Importsnce2 : Interact
         noMoreE = false;
     }
 
-    //public void Win()
-    //{
-    //    if (Dollpuzzle.Light1.enabled == true && Dollpuzzle.Light3.enabled == true && Dollpuzzle.Light5.enabled == true)
-    //    {
-    //        Debug.Log("puzzle finished");
-    //        //     PuzzlePeice.SetActive(true);
-    //    }
-    //}
+    public void Win()
+    {
+        if (DP.Light1.enabled == true && DP.Light3.enabled == true && DP.Light5.enabled == true)
+        {
+            Debug.Log("puzzle finished");
+            //     PuzzlePeice.SetActive(true);
+        }
+    }
 
 
     public void NoMoreE()
