@@ -893,7 +893,7 @@ GameObject:
   - component: {fileID: 730339719}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -912,7 +912,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!81 &730339710
 AudioListener:
@@ -994,7 +994,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 730339708}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.02, y: 1.09, z: 53.24}
+  m_LocalPosition: {x: -27.657, y: 1.09, z: 46.927}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1030,9 +1030,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   footstepAudios:
-  - {fileID: 8300000, guid: 3f514eaabf944fe41a49cb358594365f, type: 3}
-  - {fileID: 8300000, guid: 73c568f98d97ceb43b9126eb9d6a47e0, type: 3}
-  - {fileID: 8300000, guid: 0663da46f7070b840ad0e9efaf103340, type: 3}
+  - Audio:
+    - {fileID: 8300000, guid: 2d79fb999518c654fa1f3209c3fdad9b, type: 3}
+    - {fileID: 8300000, guid: 8960c33fda3b34044b073fa85f469b67, type: 3}
+    - {fileID: 8300000, guid: fd69055161514d24b972731dedaca92c, type: 3}
+  - Audio:
+    - {fileID: 8300000, guid: be2b2a2496a6b8a4b82db8937af12370, type: 3}
+    - {fileID: 8300000, guid: 82fefd12e12b47e4198c9b0ee49f3056, type: 3}
+    - {fileID: 8300000, guid: 0085e6e76a4bde741b78f49699b24f2a, type: 3}
 --- !u!114 &730339717
 MonoBehaviour:
   m_ObjectHideFlags: 0

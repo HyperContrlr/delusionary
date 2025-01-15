@@ -20,8 +20,8 @@ public class speedometer : MonoBehaviour
         {
             Vector2 prevPos = transform.position;
             yield return new WaitForFixedUpdate();
-            speed = Mathf.RoundToInt(Vector2.Distance(transform.position, prevPos) / Time.fixedDeltaTime);
-            speedomtr.text = speed.ToString();
+            speed = Mathf.Round/*&ToInt*/(Vector2.Distance(transform.position, prevPos) / Time.fixedDeltaTime);
+            //speedomtr.text = speed.ToString();
         }
     }
 }

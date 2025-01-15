@@ -4,22 +4,29 @@ using UnityEngine;
 using System;
 using System.Xml.Serialization;
 
+[Serializable]
+public struct variations
+{
+    public List<AudioClip> Audio;
+}
+
 public class Walking : MonoBehaviour
 {
     private enum TerrainTags
     {
-        Carpet,
         Tile,
         Void
     }
 
     [SerializeField]
-    private AudioClip[] footstepAudios;
+    private variations[] footstepAudios;
 
     private AudioSource audioSource;
 
     private float footstepTimer;
     private float timePerStep = 0.5f;
+
+    private List<AudioClip> currentAudio;
 
     private void Start()
     {
@@ -29,8 +36,9 @@ public class Walking : MonoBehaviour
     private void Update()
     {
         footstepTimer += Time.deltaTime;
-        if ((this.GetComponent<speedometer>().speed > 0) && audioSource.clip && footstepTimer > timePerStep )
+        if ((this.GetComponent<speedometer>().speed > 0) && footstepTimer > timePerStep )
         {
+            audioSource.clip = currentAudio[UnityEngine.Random.Range(0, currentAudio.Count)];
             audioSource.Play();
             footstepTimer = 0;
         }
@@ -43,7 +51,7 @@ public class Walking : MonoBehaviour
         {
             if(col.gameObject.tag == tag)
             {
-                audioSource.clip = footstepAudios[index];
+                currentAudio = footstepAudios[index].Audio;
 
             }
             index++;
