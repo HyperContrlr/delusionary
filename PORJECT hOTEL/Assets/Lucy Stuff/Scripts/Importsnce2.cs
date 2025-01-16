@@ -58,7 +58,7 @@ public class Importsnce2 : Interact
 
     public void Winning()
     {
-        if (DP.Light1.enabled == true && DP.Light2.enabled == false && DP.Light3.enabled == true && DP.Light4.enabled == false && DP.Light5.enabled == true)
+        if (DP.Light1.enabled == false && DP.Light2.enabled == true && DP.Light3.enabled == true && DP.Light4.enabled == false && DP.Light5.enabled == true)
         {
             Debug.Log("puzzle finished");
             //     PuzzlePeice.SetActive(true);
