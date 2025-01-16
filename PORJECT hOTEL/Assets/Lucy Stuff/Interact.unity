@@ -13162,6 +13162,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 549eb343cb2fe054c93d01a6a1ec404a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textComponent: {fileID: 0}
+  lines:
+  - Can't sleep again
+  - don't know why it still suprises me
+  - it's been this way for the past month now
+  - and I hate the reason for it so much
+  - it's so lame
+  - i'm so lame for even thinking about it
+  - but whenever I close my eyes I see her face
+  - her eyes and her smile...
+  - heh...
+  - I AM so lame for thinking about it...
+  - I remeber once being told that everyone reacts to greeif differently
+  - I hope its not as pathetic for everyone else...
+  - Ughhhhh, I hate this so much. I need to get out of this room, at least for a
+    second.
+  - Lana told me that the best way to clear the mind is to gaze over the nearst horizon.
+  - I think I saw a big window out in the hall.
+  textSpeed: 0.1
+  VN: {fileID: 0}
+  Starting: {fileID: 0}
+  change1: {fileID: 0}
+  change2: {fileID: 0}
 --- !u!4 &1697397896
 Transform:
   m_ObjectHideFlags: 0
@@ -14389,6 +14412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1607859080}
   offset: {x: 0, y: 2, z: -5}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 0}
   smoothFactor: 4
 --- !u!114 &1872871757
 MonoBehaviour:
