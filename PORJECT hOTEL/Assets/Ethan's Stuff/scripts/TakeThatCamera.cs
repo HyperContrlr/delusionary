@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -6,7 +7,6 @@ using UnityEngine;
 public class TakeThatCamera : MonoBehaviour
 {
     public GameObject player;
-    public GameObject thisThing;
     public Camera mainCamera;
     // Start is called before the first frame update
     void Start()
@@ -17,14 +17,13 @@ public class TakeThatCamera : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            mainCamera.gameObject.GetComponent<smoothCameraFollow>().target = thisThing.transform;
+            mainCamera.gameObject.GetComponent<smoothCameraFollow>().target = this.transform;
+            Debug.Log("In");
         }
+
     }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            mainCamera.gameObject.GetComponent<smoothCameraFollow>().target = player.transform;
-        }
-    }
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    mainCamera.gameObject.GetComponent<smoothCameraFollow>().target = player.transform;
+    //}
 }
