@@ -46,9 +46,6 @@ public class Mirror : MonoBehaviour
             Vas2.SetActive(!Vas2.activeSelf);
 
             Time.timeScale = 1f;
-            //ChoosingPanel.gameObject.SetActive(false);
-            //DialougeOpened = false;
-            //noMoreE = false;
         }
     }
 
@@ -63,7 +60,6 @@ public class Mirror : MonoBehaviour
             Vas.SetActive(true);
 
             Time.timeScale = 1f;
-
         }
     }
 
@@ -80,7 +76,6 @@ public class Mirror : MonoBehaviour
             Paint2.SetActive(true);
 
             Time.timeScale = 1f;
-
         }
     }
 }

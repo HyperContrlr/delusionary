@@ -39,11 +39,13 @@ public class novel : MonoBehaviour
         //{
         //    Canvas.gameObject.SetActive(false);
         //}
-        if (Input.GetMouseButtonDown(0))
+        if (DialougeOpened == true)
         {
-            ContinueInteract();
+            if (Input.GetMouseButtonDown(0))
+            {
+                ContinueInteract();
+            }
         }
-
         Change();
         Change2();
 
@@ -104,6 +106,7 @@ public class novel : MonoBehaviour
         VN.SetActive(false);
         DialougeOpened = false;
         Time.timeScale = 1f;
+
     }
 
     //public void NoMoreE()
