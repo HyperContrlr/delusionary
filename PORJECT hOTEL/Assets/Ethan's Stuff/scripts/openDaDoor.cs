@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class openDaDoor : MonoBehaviour
 {
+    public AudioSource OpenSound;
+
     public InventoryManager inventoryManager;
     private Animator animator;
     public bool canOpen;
@@ -28,6 +30,8 @@ public class openDaDoor : MonoBehaviour
             {
                 //Play the open door animation
                 animator.SetTrigger("open");
+                //Play the door sound
+                OpenSound.Play();
                 //start coroutine
                 StartCoroutine(DoorAnimationTimer());
             }

@@ -18,9 +18,9 @@ public class speedometer : MonoBehaviour
         bool isPlaying = true;
         while (isPlaying)
         {
-            Vector2 prevPos = transform.position;
+            Vector3 prevPos = transform.position;
             yield return new WaitForFixedUpdate();
-            speed = Mathf.Round/*&ToInt*/(Vector2.Distance(transform.position, prevPos) / Time.fixedDeltaTime);
+            speed = Mathf.Round/*&ToInt*/(Vector3.Distance(transform.position, prevPos) / Time.fixedDeltaTime);
             //speedomtr.text = speed.ToString();
         }
     }
