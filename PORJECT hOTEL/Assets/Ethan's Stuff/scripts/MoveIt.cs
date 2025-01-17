@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.iOS;
 
 public class MoveIt : MonoBehaviour
 {
@@ -16,7 +15,7 @@ public class MoveIt : MonoBehaviour
     public GameObject item;
     public bool canPickUp = false;
     public Animator animator;
-    public Camera camera;
+    public new Camera camera;
     public GameObject currentTarget;
     public GameObject otherTarget;
     private float activeMoveSpeed;
@@ -90,6 +89,9 @@ public class MoveIt : MonoBehaviour
     {
 
         moveInput.x = Input.GetAxisRaw("Horizontal");
+
+        moveInput.Normalize();
+
         moveInput.z = Input.GetAxisRaw("Vertical");
 
         moveInput.Normalize();

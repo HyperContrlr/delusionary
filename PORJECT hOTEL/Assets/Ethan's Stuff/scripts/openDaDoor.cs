@@ -40,43 +40,51 @@ public class openDaDoor : MonoBehaviour
         {
             if (unlockID == "1" && inventoryManager.puzzle1)
             {
-                animator.SetTrigger("open");
-                StartCoroutine(DoorAnimationTimer());
+                isLocked = false;
+                //animator.SetTrigger("open");
+                //StartCoroutine(DoorAnimationTimer());
             }
             if (unlockID == "2" && inventoryManager.puzzle2)
             {
-                animator.SetTrigger("open");
-                StartCoroutine(DoorAnimationTimer());
+                isLocked = false;
+                //animator.SetTrigger("open");
+                //StartCoroutine(DoorAnimationTimer());
             }
             if (unlockID == "3" && inventoryManager.puzzle3)
             {
-                animator.SetTrigger("open");
-                StartCoroutine(DoorAnimationTimer());
+                isLocked = false;
+                //animator.SetTrigger("open");
+                //StartCoroutine(DoorAnimationTimer());
             }
             if (unlockID == "4" && inventoryManager.doll1)
             {
-                animator.SetTrigger("open");
-                StartCoroutine(DoorAnimationTimer());
+                isLocked = false;
+                //animator.SetTrigger("open");
+                //StartCoroutine(DoorAnimationTimer());
             }
             if (unlockID == "5" && inventoryManager.doll2)
             {
-                animator.SetTrigger("open");
-                StartCoroutine(DoorAnimationTimer());
+                isLocked = false;
+                //animator.SetTrigger("open");
+                //StartCoroutine(DoorAnimationTimer());
             }
             if (unlockID == "6" && inventoryManager.doll3)
             {
-                animator.SetTrigger("open");
-                StartCoroutine(DoorAnimationTimer());
+                isLocked = false;
+                //animator.SetTrigger("open");
+                //StartCoroutine(DoorAnimationTimer());
             }
             if (unlockID == "7" && inventoryManager.keycard1)
             {
-                animator.SetTrigger("open");
-                StartCoroutine(DoorAnimationTimer());
+                isLocked = false;
+                //animator.SetTrigger("open");
+                //StartCoroutine(DoorAnimationTimer());
             }
             if (unlockID == "8" && inventoryManager.keycard2)
             {
-                animator.SetTrigger("open");
-                StartCoroutine(DoorAnimationTimer());
+                isLocked = false;
+                //animator.SetTrigger("open");
+                //StartCoroutine(DoorAnimationTimer());
             }
         }
     }
