@@ -15,7 +15,10 @@ public class MoveIt : MonoBehaviour
     public KeyCode KeyboardSprint;
     public GameObject item;
     public bool canPickUp = false;
-
+    public Animator animator;
+    public Camera camera;
+    public GameObject currentTarget;
+    public GameObject otherTarget;
     private float activeMoveSpeed;
     public speedometer speeeeed;
     //public Animator animator;
@@ -25,6 +28,7 @@ public class MoveIt : MonoBehaviour
     {
         //For now, assigns the controls
         controls = new TheControls();
+        camera = Camera.main;
     }
     void OnEnable()
     {
@@ -90,31 +94,32 @@ public class MoveIt : MonoBehaviour
 
         moveInput.Normalize();
 
+        this.transform.rotation = Camera.main.transform.rotation;
+
         rb.velocity = moveInput * activeMoveSpeed;
-        /*if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W))
         {
-            animator.SetInteger("WalkDirection", 1);
+            animator.Play("backward");
         }
         if (Input.GetKey(KeyCode.A))
         {
-            animator.SetInteger("WalkDirection", 2);
+            animator.Play("left");
         }
         if (Input.GetKey(KeyCode.S))
         {
-            animator.SetInteger("WalkDirection", 3);
+            animator.Play("forward");
         }
         if (Input.GetKey(KeyCode.D))
         {
-            animator.SetInteger("WalkDirection", 4);
+            animator.Play("right");
         }
-        if (speeeeed.speed <= 0)
+        if (speeeeed.speed > 0)
         {
-            animator.SetInteger("WalkDirection", 0);
+            animator.speed = 1;
         }
-        else
+        else if (speeeeed.speed <= 0)
         {
-
-        }*/
-
+            animator.speed = 0;
+        }
     }
 }

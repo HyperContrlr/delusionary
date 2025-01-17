@@ -43,44 +43,40 @@ public class openDaDoor : MonoBehaviour
                 animator.SetTrigger("open");
                 StartCoroutine(DoorAnimationTimer());
             }
-            else if (unlockID == "2" && inventoryManager.puzzle2)
+            if (unlockID == "2" && inventoryManager.puzzle2)
             {
                 animator.SetTrigger("open");
                 StartCoroutine(DoorAnimationTimer());
             }
-            else if (unlockID == "3" && inventoryManager.puzzle3)
+            if (unlockID == "3" && inventoryManager.puzzle3)
             {
                 animator.SetTrigger("open");
                 StartCoroutine(DoorAnimationTimer());
             }
-            else if (unlockID == "4" && inventoryManager.doll1)
+            if (unlockID == "4" && inventoryManager.doll1)
             {
                 animator.SetTrigger("open");
                 StartCoroutine(DoorAnimationTimer());
             }
-            else if (unlockID == "5" && inventoryManager.doll2)
+            if (unlockID == "5" && inventoryManager.doll2)
             {
                 animator.SetTrigger("open");
                 StartCoroutine(DoorAnimationTimer());
             }
-            else if (unlockID == "6" && inventoryManager.doll3)
+            if (unlockID == "6" && inventoryManager.doll3)
             {
                 animator.SetTrigger("open");
                 StartCoroutine(DoorAnimationTimer());
             }
-            else if (unlockID == "7" && inventoryManager.keycard1)
+            if (unlockID == "7" && inventoryManager.keycard1)
             {
                 animator.SetTrigger("open");
                 StartCoroutine(DoorAnimationTimer());
             }
-            else if (unlockID == "8" && inventoryManager.keycard2)
+            if (unlockID == "8" && inventoryManager.keycard2)
             {
                 animator.SetTrigger("open");
                 StartCoroutine(DoorAnimationTimer());
-            }
-            else
-            {
-                return;
             }
         }
     }
