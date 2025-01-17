@@ -16,7 +16,8 @@ public class Importance : Interact
     public bool DialougeOpened;
     public bool ChoiceTime;
     public GameObject PuzzlePeice;
-    public GameObject Jumpscare;
+    public GameObject WinText;
+    //public GameObject Jumpscare;
 
     public void Start()
     {
@@ -134,13 +135,20 @@ public class Importance : Interact
         if (ObjectSetup.VaseRL.activeSelf == true && ObjectSetup.VaseRR.activeSelf == true && ObjectSetup.PaintingLL.activeSelf == true && ObjectSetup.PaintingRR.activeSelf == true && ObjectSetup.PhotoGraphLL.activeSelf == true && ObjectSetup.PhotoGraphLR.activeSelf == true)
         {
             Debug.Log("puzzle finished");
-       //     PuzzlePeice.SetActive(true);
-            Jumpscare.SetActive(true);
+            StartCoroutine(Won());
+            PuzzlePeice.SetActive(true);
+            //Jumpscare.SetActive(true);
         }
+    }
+    public IEnumerator Won()
+    {
+        WinText.SetActive(true);
+        yield return new WaitForSeconds(3F);
+        WinText.SetActive(false);
     }
 
 
-        public void NoMoreE()
+    public void NoMoreE()
     {
         if (noMoreE == true)
         {
