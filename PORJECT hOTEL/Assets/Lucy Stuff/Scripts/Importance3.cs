@@ -9,6 +9,7 @@ public class Importance3 : Interact
 {
     public bool DialougeOpened;
     public GameObject KeyPad;
+    
 
     public override void Update()
     {
@@ -49,6 +50,8 @@ public class Importance3 : Interact
         noMoreE = false;
         KeyPad.SetActive(false);
     }
+
+    
 
     public void NO()
     {

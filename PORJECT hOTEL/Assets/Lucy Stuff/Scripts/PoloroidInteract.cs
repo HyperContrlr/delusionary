@@ -81,6 +81,7 @@ public class PoloroidInteract : Interact2
 
     public override void CloseInteract()
     {
+        base.CloseInteract();
         VN.SetActive(false);
         DialougeOpened = false;
         Time.timeScale = 1f;

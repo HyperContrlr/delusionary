@@ -52,6 +52,7 @@ public abstract class Interact2 : MonoBehaviour
 
     public virtual void CloseInteract()
     {
+
         Canvas.SetActive(false);
         noMoreE = false;
         Time.timeScale = 1f;
