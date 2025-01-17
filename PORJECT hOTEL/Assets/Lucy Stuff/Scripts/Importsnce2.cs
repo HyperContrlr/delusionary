@@ -10,7 +10,8 @@ public class Importsnce2 : Interact
     public Dollpuzzle DP;
     public bool DialougeOpened;
     public GameObject PuzzlePeice;
-   
+    public GameObject WinText;
+
     public override void Update()
     {
         base.Update();
@@ -61,8 +62,15 @@ public class Importsnce2 : Interact
         if (DP.Light1.enabled == false && DP.Light2.enabled == true && DP.Light3.enabled == true && DP.Light4.enabled == false && DP.Light5.enabled == true)
         {
             Debug.Log("puzzle finished");
-            //     PuzzlePeice.SetActive(true);
+            StartCoroutine(Won());
+            PuzzlePeice.SetActive(true);
         }
+    }
+    public IEnumerator Won()
+    {
+        WinText.SetActive(true);
+        yield return new WaitForSeconds(3F);
+        WinText.SetActive(false);
     }
 
 
