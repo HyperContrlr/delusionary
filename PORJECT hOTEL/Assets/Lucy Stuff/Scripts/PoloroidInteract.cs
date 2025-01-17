@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.iOS;
 using UnityEngine;
 
 public class PoloroidInteract : Interact2

@@ -12,9 +12,9 @@ public class Keypad : MonoBehaviour
     public string VMText = string.Empty;
     public int delayTime = 5;
     public TMPro.TMP_Text digits;
-    public GameObject PuzzlePeice;
-    public GameObject WinText;
-    public GameObject FakePuzzlePeice;
+    //public GameObject PuzzlePeice;
+    //public GameObject WinText;
+    //public GameObject FakePuzzlePeice;
 
 
     public void afterClick2()
@@ -23,9 +23,9 @@ public class Keypad : MonoBehaviour
         {
             complete = true;
             clickable = false;
-            StartCoroutine(Won());
-            PuzzlePeice.SetActive(true);
-            FakePuzzlePeice.SetActive(false);
+            //StartCoroutine(Won());
+            //PuzzlePeice.SetActive(true);
+            //FakePuzzlePeice.SetActive(false);
         }
         else
         {
@@ -37,12 +37,12 @@ public class Keypad : MonoBehaviour
             clickable = true;
         }
     }
-    public IEnumerator Won()
-    {
-        WinText.SetActive(true);
-        yield return new WaitForSeconds(3F);
-        WinText.SetActive(false);
-    }
+    //public IEnumerator Won()
+    //{
+    //    WinText.SetActive(true);
+    //    yield return new WaitForSeconds(3F);
+    //    WinText.SetActive(false);
+    //}
     public void onSquareClick() 
     {
         if (clickable == true)

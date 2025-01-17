@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.iOS;
 
 public class Dialogue : Interact
 {

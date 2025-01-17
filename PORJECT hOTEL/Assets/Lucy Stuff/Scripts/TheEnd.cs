@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.iOS;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -21,6 +20,7 @@ public class TheEnd : Interact2
     public GameObject change2;
     bool DialougeOpened;
     public Animator Animation;
+    private InventoryManager inventoryManager;
 
     public virtual void Update()
     {
@@ -34,18 +34,14 @@ public class TheEnd : Interact2
         }
         Change();
         Change2();
+        
 
     }
 
-    //if(you have all 3 puzzle pieces)
-    //{
-    //FinalDoor.SetActive(true)
-    //    AC.SetActive(false)
-    //}
 
     public void Start()
     {
-      
+        inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
     }
 
     public override void StartInteract()
@@ -151,5 +147,13 @@ public class TheEnd : Interact2
         Animation.SetTrigger("FadeTobLAck");
         yield return new WaitForSeconds(5F);
         SceneManager.LoadScene("Master Credits");
+    }
+    public void FixedUpdate()
+    {
+        if (inventoryManager.puzzle1 && inventoryManager.puzzle3 && inventoryManager.puzzle2)
+        {
+            FinalDoor.SetActive(true);
+            AC.SetActive(false);
+        }
     }
 }
