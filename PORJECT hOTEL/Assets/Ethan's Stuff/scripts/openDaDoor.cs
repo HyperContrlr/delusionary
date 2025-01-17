@@ -84,7 +84,7 @@ public class openDaDoor : MonoBehaviour
             {
                 isLocked = false;
                 //animator.SetTrigger("open");
-                //StartCoroutine(DoorAnimationTimer());
+                //StartCoroutine(DoorAnimationTimer());4
             }
         }
     }
